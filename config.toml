@@ -1,4 +1,4 @@
-baseURL = "https://aishitran.github.io/fcj-workshop/"
+baseURL = "https://aishitran.github.io/fcjp-workshop/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
