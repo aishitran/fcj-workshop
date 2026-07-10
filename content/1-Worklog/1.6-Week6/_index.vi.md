@@ -1,58 +1,56 @@
 ---
-title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc Tuần 6"
+date: 2026-05-25
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 6:
 
-### Mục tiêu tuần 6:
+* Tìm hiểu cơ sở dữ liệu NoSQL với Amazon DynamoDB.
+* Làm quen với mô hình điện toán Serverless thông qua AWS Lambda và các phương pháp tối ưu chi phí.
+* Nắm vững dịch vụ phân phối nội dung Amazon CloudFront.
+* Tối ưu hiệu năng ứng dụng và giảm độ trễ khi truy cập trên phạm vi toàn cầu.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Chủ đề | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Cơ sở dữ liệu NoSQL | **Làm việc với Amazon DynamoDB** <br> - Tạo và quản lý bảng DynamoDB <br> - Tìm hiểu Partition Key và Sort Key <br> - Cấu hình chế độ đọc/ghi dữ liệu <br> - Tìm hiểu Global Tables để phân phối dữ liệu đa khu vực | 25/05/2026 | 25/05/2026 | <https://000060.awsstudygroup.com/> |
+| Serverless & Tối ưu chi phí | **Tối ưu chi phí EC2 bằng AWS Lambda** <br> - Tạo Lambda Function để tự động hóa tác vụ <br> - Sử dụng Lambda thay thế hoặc hỗ trợ EC2 <br> - Tìm hiểu mô hình tính phí theo số lần thực thi <br> - Tối ưu hiệu năng và thời gian thực thi của Lambda | 28/05/2026 | 28/05/2026 | <https://000022.awsstudygroup.com/> |
+| Phân phối nội dung | **CloudFront với S3 Bucket Origin** <br> - Tạo CloudFront Distribution <br> - Cấu hình S3 làm Origin <br> - Thiết lập Cache Behavior và TTL <br> - Thực hiện Cache Invalidation khi cập nhật nội dung | 30/05/2026 | 30/05/2026 | <https://000094.awsstudygroup.com/> |
 
+# Kết quả đạt được trong Tuần 6
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Cơ sở dữ liệu NoSQL với Amazon DynamoDB
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Tạo và quản lý thành công **Amazon DynamoDB Table** với mô hình dữ liệu linh hoạt.
+- Hiểu vai trò của **Partition Key** và **Sort Key** trong việc phân phối dữ liệu và tối ưu hiệu năng truy vấn.
+- Cấu hình các chế độ **Provisioned Capacity** và **On-demand Capacity**, đồng thời hiểu ưu nhược điểm của từng chế độ.
+- Tìm hiểu **DynamoDB Streams** để ghi nhận thay đổi dữ liệu và tích hợp với các dịch vụ AWS khác.
+- Làm quen với **Global Tables**, cho phép sao chép dữ liệu giữa nhiều Region nhằm tăng khả năng sẵn sàng và giảm độ trễ.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+## Điện toán Serverless với AWS Lambda
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Xây dựng các **AWS Lambda Function** để tự động hóa nhiều tác vụ mà không cần quản lý máy chủ.
+- Hiểu cách **AWS Lambda** tính chi phí dựa trên số lần thực thi và thời gian chạy, giúp tối ưu chi phí cho các khối lượng công việc không liên tục.
+- Sử dụng **Lambda** để thay thế hoặc hỗ trợ EC2 trong các tác vụ như xử lý dữ liệu, chạy theo lịch và xây dựng API.
+- Tối ưu **hiệu năng Lambda** thông qua việc điều chỉnh bộ nhớ, thời gian thực thi và quản lý thư viện phụ thuộc.
+- Tìm hiểu **Lambda Layers** để tái sử dụng mã nguồn và giảm kích thước gói triển khai.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+## Phân phối nội dung với Amazon CloudFront
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Tạo **CloudFront Distribution** để phân phối nội dung từ các Edge Location gần người dùng nhất.
+- Cấu hình **Amazon S3** làm Origin cho việc phân phối nội dung tĩnh.
+- Thiết lập **Cache Behavior** và **Time-to-Live (TTL)** nhằm cân bằng giữa hiệu năng và khả năng cập nhật dữ liệu.
+- Thực hiện **Cache Invalidation** để xóa nội dung cũ khỏi bộ nhớ đệm khi có phiên bản mới.
+- Hiểu cách **Edge Location** giúp giảm độ trễ và cải thiện tốc độ truy cập trên phạm vi toàn cầu.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+### Tóm tắt lý thuyết
 
-
+- **Amazon DynamoDB:** Dịch vụ cơ sở dữ liệu NoSQL được AWS quản lý hoàn toàn, cung cấp hiệu năng cao với khả năng mở rộng linh hoạt và độ trễ rất thấp.
+- **Partition Key:** Khóa chính dùng để phân phối dữ liệu trên các Partition của DynamoDB, ảnh hưởng trực tiếp đến hiệu năng và khả năng mở rộng.
+- **AWS Lambda:** Dịch vụ điện toán Serverless cho phép chạy mã nguồn theo sự kiện mà không cần quản lý máy chủ.
+- **Amazon CloudFront:** Dịch vụ CDN (Content Delivery Network) của AWS giúp phân phối nội dung từ các Edge Location nhằm giảm độ trễ và tăng tốc độ truy cập.
+- **TTL (Time-to-Live):** Thời gian CloudFront lưu trữ dữ liệu trong bộ nhớ đệm trước khi lấy phiên bản mới từ Origin.

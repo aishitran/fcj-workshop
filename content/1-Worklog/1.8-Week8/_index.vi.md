@@ -1,59 +1,56 @@
 ---
-title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+title: "Nhật Ký Tuần 8"
+date: 2026-06-08
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 8:
 
-### Mục tiêu tuần 8:
+* Thành thạo chiến lược gắn thẻ (tagging) tài nguyên để tổ chức và theo dõi chi phí.
+* Học các kỹ thuật IAM nâng cao sử dụng thẻ tài nguyên để kiểm soát truy cập chi tiết.
+* Hiểu về AWS Systems Manager để quản lý hạ tầng ở quy mô lớn.
+* Học quản lý phiên (session) và truy cập từ xa vào EC2 instance.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các nhiệm vụ thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Chủ đề | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Quản lý Tài nguyên | **Quản lý Tài nguyên bằng Thẻ và Nhóm Tài nguyên** <br> - Triển khai chiến lược gắn thẻ <br> - Tổ chức tài nguyên bằng thẻ <br> - Tạo nhóm tài nguyên theo thẻ <br> - Theo dõi chi phí bằng thẻ | 08/06/2026 | 08/06/2026 | <https://000027.awsstudygroup.com/> |
+| Kiểm soát Truy cập Chi tiết | **Quản lý Truy cập vào Dịch vụ EC2 bằng Thẻ Tài nguyên thông qua IAM** <br> - Tạo chính sách IAM dựa trên thẻ <br> - Kiểm soát truy cập tài nguyên bằng thẻ <br> - Triển khai kiểm soát truy cập theo môi trường (dev, staging, prod) <br> - Kiểm tra các mẫu truy cập dựa trên thẻ | 09/06/2026 | 09/06/2026 | <https://000028.awsstudygroup.com/> |
+| Quản lý Hạ tầng | **Quản lý Bản vá và Chạy Lệnh trên Nhiều Máy chủ với AWS Systems Manager** <br> - Thiết lập agent Systems Manager <br> - Tạo chính sách vá lỗi và nhóm vá lỗi <br> - Chạy lệnh trên nhiều instance <br> - Giám sát mức độ tuân thủ bản vá | 10/06/2026 | 10/06/2026 | <https://000031.awsstudygroup.com/> |
+| Truy cập từ xa | **Làm việc với Amazon Systems Manager - Session Manager** <br> - Cấu hình Session Manager để truy cập EC2 an toàn <br> - Tạo vai trò IAM cho Session Manager <br> - Thiết lập phiên làm việc không cần khóa SSH <br> - Giám sát và ghi log hoạt động phiên | 11/06/2026 | 11/06/2026 | <https://000058.awsstudygroup.com/> |
 
+# Thành tựu Tuần 8
 
-### Kết quả đạt được tuần 8:
+## Chiến lược Gắn thẻ Tài nguyên
+- Triển khai **chiến lược gắn thẻ toàn diện** phân loại tài nguyên theo môi trường (dev/staging/prod), dự án, chủ sở hữu, trung tâm chi phí và ứng dụng.
+- Tổ chức **kho tài nguyên quy mô lớn** bằng thẻ, giúp tài nguyên dễ dàng được tìm thấy và quản lý.
+- Tạo **nhóm tài nguyên** dựa trên bộ lọc thẻ để tổ chức hợp lý và thực hiện thao tác hàng loạt.
+- Sử dụng **thẻ để phân bổ chi phí**, cho phép quy trách nhiệm chi phí (chargeback) và theo dõi chi tiết theo đơn vị kinh doanh, dự án hoặc môi trường.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Kiểm soát Truy cập Chi tiết bằng Thẻ
+- Tạo **chính sách IAM dựa trên thẻ** cho phép cấp quyền dựa trên thẻ tài nguyên thay vì tên tài nguyên hay ARN.
+- Triển khai **kiểm soát truy cập theo môi trường**: nhà phát triển chỉ truy cập tài nguyên dev, QA truy cập staging, bộ phận vận hành truy cập production.
+- Sử dụng các **khóa điều kiện (condition key)** như `aws:PrincipalTag` và `aws:ResourceTag` để quản lý quyền một cách linh hoạt và có khả năng mở rộng.
+- Kiểm tra **các mẫu truy cập dựa trên thẻ** để đảm bảo chính sách bảo mật được thực thi đúng và phát hiện các bất thường.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+## Quản lý Hạ tầng ở Quy mô Lớn
+- Thiết lập **agent Systems Manager** trên các EC2 instance để có khả năng quản lý và tự động hóa.
+- Tạo **chính sách vá lỗi** xác định lịch trình vá lỗi và nhóm vá lỗi để quản lý bản vá có tổ chức.
+- Thực thi **Run Command** để chạy script và lệnh trên nhiều instance cùng lúc, giảm công sức cấu hình thủ công.
+- Giám sát **mức độ tuân thủ bản vá** và tạo báo cáo cho biết instance nào đã được cập nhật các bản vá bảo mật.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+## Truy cập Từ xa An toàn với Session Manager
+- Cấu hình **Session Manager** như một giải pháp thay thế an toàn cho SSH, loại bỏ nhu cầu quản lý khóa SSH.
+- Tạo **vai trò IAM có quyền Session Manager** để kiểm soát truy cập chi tiết đến từng instance riêng lẻ.
+- Thiết lập **phiên làm việc đến EC2 instance** thông qua AWS console hoặc CLI mà không cần mở instance ra internet.
+- Bật **ghi log và giám sát phiên làm việc** trong CloudTrail và CloudWatch để phục vụ kiểm toán và tuân thủ.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### Tóm tắt lý thuyết
+- **Thẻ Tài nguyên (Resource Tags)**: Cặp khóa-giá trị gắn vào tài nguyên AWS để phục vụ tổ chức, tự động hóa và phân bổ chi phí.
+- **Chiến lược Gắn thẻ**: Phương pháp tiếp cận có hệ thống trong việc gắn thẻ, xác định các chiều (môi trường, dự án, chủ sở hữu, trung tâm chi phí, v.v.) để quản lý tài nguyên nhất quán.
+- **Chính sách IAM dựa trên Thẻ**: Kiểm soát truy cập dựa trên điều kiện sử dụng thẻ tài nguyên và thẻ chủ thể (principal), cho phép quản lý quyền có khả năng mở rộng mà không cần mã hóa cứng ARN tài nguyên.
+- **Systems Manager**: Dịch vụ AWS trung tâm để quản lý hạ tầng bao gồm vá lỗi, tự động hóa và truy cập từ xa.
+- **Session Manager**: Công cụ truy cập từ xa an toàn cung cấp quyền truy cập shell vào EC2 instance mà không cần khóa SSH, với đầy đủ khả năng ghi log kiểm toán.

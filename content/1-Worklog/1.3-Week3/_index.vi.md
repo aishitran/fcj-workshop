@@ -1,59 +1,46 @@
 ---
-title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc Tuần 3"
+date: 2026-05-04
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 3:
 
-### Mục tiêu tuần 3:
+* Tìm hiểu AWS Identity and Access Management (IAM) và các nguyên tắc bảo mật trên AWS.
+* Hiểu cách cấp quyền cho ứng dụng truy cập các dịch vụ AWS thông qua IAM Role.
+* Làm quen với Amazon S3 (Simple Storage Service) để lưu trữ dữ liệu.
+* Tìm hiểu về S3 Bucket, cơ chế phân quyền và quản lý dữ liệu.
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc thực hiện trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Chủ đề | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Quản lý danh tính và phân quyền | **Cấp quyền cho ứng dụng truy cập các dịch vụ AWS bằng IAM Role** <br> - Tạo IAM Role và IAM Policy <br> - Tìm hiểu nguyên tắc Least Privilege <br> - Gán IAM Role cho EC2 Instance <br> - Cấu hình truy cập giữa các tài khoản AWS | 04/05/2026 | 04/05/2026 | <https://000048.awsstudygroup.com/> |
+| Lưu trữ đối tượng | **Làm quen với Amazon S3** <br> - Tạo và cấu hình S3 Bucket <br> - Tải lên và quản lý đối tượng <br> - Cấu hình Bucket Policy và ACL <br> - Bật Versioning và Static Website Hosting | 08/05/2026 | 08/05/2026 | <https://000057.awsstudygroup.com/> |
 
+# Kết quả đạt được trong Tuần 3
 
-### Kết quả đạt được tuần 3:
+## Quản lý danh tính và phân quyền
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Tạo thành công **IAM Role** và gắn **IAM Policy** để cấp quyền cho ứng dụng truy cập các dịch vụ AWS.
+- Hiểu rõ nguyên tắc **Least Privilege (Phân quyền tối thiểu)**, chỉ cấp các quyền cần thiết để đảm bảo an toàn cho hệ thống.
+- Thực hành gán **IAM Role cho EC2 Instance**, giúp ứng dụng truy cập các dịch vụ AWS như Amazon S3 hoặc Amazon RDS mà không cần lưu trữ Access Key.
+- Tìm hiểu **Trust Relationship** và cơ chế cấp quyền truy cập giữa nhiều tài khoản AWS.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+## Kiến thức cơ bản về Amazon S3
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Tạo và cấu hình **Amazon S3 Bucket** để lưu trữ dữ liệu trên AWS.
+- Tìm hiểu các **S3 Storage Class** và lựa chọn lớp lưu trữ phù hợp nhằm tối ưu chi phí.
+- Cấu hình **Bucket Policy** và **Access Control List (ACL)** để kiểm soát quyền truy cập vào Bucket và các đối tượng.
+- Bật **Versioning** nhằm lưu trữ nhiều phiên bản của cùng một đối tượng để bảo vệ dữ liệu.
+- Thực hành **Static Website Hosting** để triển khai website tĩnh trực tiếp trên Amazon S3.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Tóm tắt lý thuyết
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- **IAM (Identity and Access Management):** Dịch vụ quản lý danh tính và phân quyền, cho phép kiểm soát người dùng và quyền truy cập đến các tài nguyên AWS thông qua User, Group, Role và Policy.
+- **IAM Role:** Cơ chế cấp quyền tạm thời cho người dùng hoặc dịch vụ AWS mà không cần sử dụng Access Key lâu dài.
+- **Amazon S3 Bucket:** Vùng chứa dùng để lưu trữ dữ liệu dưới dạng Object với khả năng mở rộng cao và nhiều tùy chọn cấu hình.
+- **Least Privilege:** Nguyên tắc bảo mật chỉ cấp đúng các quyền cần thiết để thực hiện công việc.
+- **S3 Versioning:** Tính năng lưu giữ nhiều phiên bản của cùng một đối tượng nhằm hỗ trợ khôi phục dữ liệu khi cần thiết.
