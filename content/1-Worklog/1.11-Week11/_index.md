@@ -1,57 +1,66 @@
 ---
 title: "Week 11 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-29
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand the overall ReviewSentinel system architecture and assigned AWS services.
+* Study authentication and authorization using Amazon Cognito and IAM.
+* Review the DynamoDB data model and event-driven workflow.
+* Learn the responsibilities of Lambda functions within the project.
+* Prepare the Terraform development environment for infrastructure deployment.
+* Get ready for implementing the application infrastructure in Week 12.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | **Review ReviewSentinel System Architecture** <br> - Study the interaction between API Gateway, Lambda, DynamoDB, S3, Comprehend, and Bedrock <br> - Understand the overall request and processing flow <br> - Identify AWS resources assigned for implementation | 06/29/2026 | 06/29/2026 | AWS Study Group |
+| 3 | **Study Authentication and Authorization** <br> - Learn Amazon Cognito User Pools <br> - Review JWT authentication flow with API Gateway <br> - Understand IAM least-privilege permissions for Lambda functions | 06/30/2026 | 06/30/2026 | AWS Study Group |
+| 4 | **Review Database Design** <br> - Analyze DynamoDB table structures <br> - Study partition keys, sort keys, and access patterns <br> - Understand S3 event notifications and processing workflow | 07/01/2026 | 07/01/2026 | AWS Study Group |
+| 5 | **Study AWS Lambda Design** <br> - Review Lambda function responsibilities <br> - Understand event sources and execution flow <br> - Learn CloudWatch logging and error handling | 07/02/2026 | 07/02/2026 | AWS Study Group |
+| 6 | **Prepare Terraform Development Environment** <br> - Configure Terraform locally <br> - Review provider, variables, and module structure <br> - Verify the deployment workflow for AWS resources | 07/03/2026 | 07/03/2026 | AWS Study Group |
 
-### Week 11 Achievements:
+# Week 11 Achievements
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## System Architecture Review
 
-* Successfully created and configured an AWS Free Tier account.
+- Reviewed the overall **ReviewSentinel** architecture to understand how each AWS service interacts within the application.
+- Identified the responsibilities of API Gateway, AWS Lambda, Amazon DynamoDB, Amazon S3, Amazon Comprehend, and Amazon Bedrock in the complete workflow.
+- Gained a clear understanding of the end-to-end request flow from user submission to sentiment analysis and result storage.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+## Authentication and Security
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Studied **Amazon Cognito** authentication and user management.
+- Understood how **JWT tokens** are validated through API Gateway authorization.
+- Reviewed the **IAM least-privilege** principle and how Lambda functions receive only the permissions required for their assigned tasks.
 
-* Used AWS CLI to perform basic operations such as:
+## Database and Event-driven Workflow
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+- Analyzed the DynamoDB data model, including **Reviews**, **Products**, and **Users** tables.
+- Learned the expected access patterns used by the application to improve query efficiency.
+- Understood how **Amazon S3 event notifications** trigger Lambda functions for automatic review processing.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+## AWS Lambda Preparation
+
+- Reviewed the responsibilities of the project's Lambda functions and their execution flow.
+- Learned how Lambda integrates with API Gateway, DynamoDB Streams, and Amazon S3.
+- Studied CloudWatch logging and basic error-handling practices for serverless applications.
+
+## Terraform Environment Setup
+
+- Prepared the local **Terraform** development environment.
+- Reviewed the project structure, including providers, variables, and reusable modules.
+- Verified the workflow for provisioning AWS infrastructure using Infrastructure as Code (IaC).
+
+### Theory Summary
+
+- **Amazon Cognito** provides user authentication and authorization using managed user pools and JWT tokens.
+- **AWS Lambda** enables serverless execution based on events from services such as API Gateway, Amazon S3, and DynamoDB Streams.
+- **Amazon DynamoDB** is a fully managed NoSQL database optimized through partition keys, sort keys, and efficient access patterns.
+- **Terraform** is an Infrastructure as Code (IaC) tool that automates AWS resource provisioning through reusable configuration files.
+- **Event-driven architecture** allows AWS services to communicate asynchronously, enabling scalable and loosely coupled applications.
