@@ -1,6 +1,6 @@
 ---
-title: "Nhật Ký Tuần 9"
-date: 2026-06-15
+title: "Nhật ký công việc Tuần 9"
+date: 15/06/2026
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
