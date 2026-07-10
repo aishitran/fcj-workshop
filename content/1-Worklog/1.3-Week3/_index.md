@@ -17,8 +17,8 @@ pre: " <b> 1.3. </b> "
 
 | Topic | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| Identity & Access Management | **Granting authorization for an application to access AWS services with an IAM role** <br> - Create IAM roles and policies <br> - Understand the principle of least privilege <br> - Assign roles to EC2 instances <br> - Configure cross-account access | 05/04/2026 | 05/10/2026 | <https://000048.awsstudygroup.com/> |
-| Object Storage | **Starting with Amazon S3** <br> - Create and configure S3 buckets <br> - Upload and manage objects <br> - Configure bucket policies and ACLs <br> - Enable versioning and static website hosting | 05/04/2026 | 05/10/2026 | <https://000057.awsstudygroup.com/> |
+| Identity & Access Management | **Granting authorization for an application to access AWS services with an IAM role** <br> - Create IAM roles and policies <br> - Understand the principle of least privilege <br> - Assign roles to EC2 instances <br> - Configure cross-account access | 05/04/2026 | 05/04/2026 | <https://000048.awsstudygroup.com/> |
+| Object Storage | **Starting with Amazon S3** <br> - Create and configure S3 buckets <br> - Upload and manage objects <br> - Configure bucket policies and ACLs <br> - Enable versioning and static website hosting | 05/08/2026 | 05/08/2026 | <https://000057.awsstudygroup.com/> |
 
 # Week 3 Achievements
 

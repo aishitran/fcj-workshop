@@ -18,11 +18,11 @@ pre: " <b> 1.5. </b> "
 
 | Topic | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| DNS & Hybrid Connectivity | **Set up Hybrid DNS with Route 53 Resolver** <br> - Configure Route 53 hosted zones <br> - Set up Route 53 Resolver for hybrid DNS <br> - Create DNS failover policies <br> - Understand DNS routing policies | 05/18/2026 | 05/24/2026 | <https://000010.awsstudygroup.com/> |
-| Infrastructure Automation | **Getting Started with the AWS CLI** <br> - Master AWS CLI command structure <br> - Automate EC2, S3, and RDS operations <br> - Configure profiles and credentials <br> - Write scripts for infrastructure management | 05/18/2026 | 05/24/2026 | <https://000011.awsstudygroup.com/> |
-| Caching & Performance | **Amazon ElastiCache - Redis** <br> - Deploy Redis clusters <br> - Understand caching patterns and strategies <br> - Configure replication and failover <br> - Monitor cache performance | 05/18/2026 | 05/24/2026 | <https://000061.awsstudygroup.com/> |
-| Data Migration | **Database Schema Conversion & Migration** <br> - Assess migration readiness <br> - Convert database schemas between engines <br> - Migrate data with minimal downtime <br> - Validate data integrity post-migration | 05/18/2026 | 05/24/2026 | <https://000043.awsstudygroup.com/> |
-| Disaster Recovery | **AWS Elastic Disaster Recovery Workshop** <br> - Understand RTO and RPO concepts <br> - Set up replication and failover <br> - Create disaster recovery plans <br> - Test recovery procedures | 05/18/2026 | 05/24/2026 | <https://000100.awsstudygroup.com/> |
+| DNS & Hybrid Connectivity | **Set up Hybrid DNS with Route 53 Resolver** <br> - Configure Route 53 hosted zones <br> - Set up Route 53 Resolver for hybrid DNS <br> - Create DNS failover policies <br> - Understand DNS routing policies | 05/18/2026 | 05/18/2026 | <https://000010.awsstudygroup.com/> |
+| Infrastructure Automation | **Getting Started with the AWS CLI** <br> - Master AWS CLI command structure <br> - Automate EC2, S3, and RDS operations <br> - Configure profiles and credentials <br> - Write scripts for infrastructure management | 05/19/2026 | 05/19/2026 | <https://000011.awsstudygroup.com/> |
+| Caching & Performance | **Amazon ElastiCache - Redis** <br> - Deploy Redis clusters <br> - Understand caching patterns and strategies <br> - Configure replication and failover <br> - Monitor cache performance | 05/21/2026 | 05/21/2026 | <https://000061.awsstudygroup.com/> |
+| Data Migration | **Database Schema Conversion & Migration** <br> - Assess migration readiness <br> - Convert database schemas between engines <br> - Migrate data with minimal downtime <br> - Validate data integrity post-migration | 05/23/2026 | 05/23/2026 | <https://000043.awsstudygroup.com/> |
+| Disaster Recovery | **AWS Elastic Disaster Recovery Workshop** <br> - Understand RTO and RPO concepts <br> - Set up replication and failover <br> - Create disaster recovery plans <br> - Test recovery procedures | 05/24/2026 | 05/24/2026 | <https://000100.awsstudygroup.com/> |
 
 # Week 5 Achievements
 

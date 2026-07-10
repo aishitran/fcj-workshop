@@ -17,9 +17,9 @@ pre: " <b> 1.6. </b> "
 
 | Topic | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| NoSQL Database | **Work with Amazon DynamoDB** <br> - Create and manage DynamoDB tables <br> - Understand partition keys and sort keys <br> - Configure read/write capacity modes <br> - Learn about global tables for global distribution | 05/25/2026 | 05/31/2026 | <https://000060.awsstudygroup.com/> |
-| Serverless & Cost Optimization | **Optimizing EC2 Costs with Lambda** <br> - Create Lambda functions for task automation <br> - Use Lambda to replace or supplement EC2 instances <br> - Understand pay-per-execution pricing model <br> - Optimize function performance and duration | 05/25/2026 | 05/31/2026 | <https://000022.awsstudygroup.com/> |
-| Content Delivery | **CloudFront with S3 Bucket Origin** <br> - Create CloudFront distributions <br> - Configure S3 as an origin <br> - Set up caching behaviors and TTLs <br> - Use cache invalidation for content updates | 05/25/2026 | 05/31/2026 | <https://000094.awsstudygroup.com/> |
+| NoSQL Database | **Work with Amazon DynamoDB** <br> - Create and manage DynamoDB tables <br> - Understand partition keys and sort keys <br> - Configure read/write capacity modes <br> - Learn about global tables for global distribution | 05/25/2026 | 05/25/2026 | <https://000060.awsstudygroup.com/> |
+| Serverless & Cost Optimization | **Optimizing EC2 Costs with Lambda** <br> - Create Lambda functions for task automation <br> - Use Lambda to replace or supplement EC2 instances <br> - Understand pay-per-execution pricing model <br> - Optimize function performance and duration | 05/28/2026 | 05/28/2026 | <https://000022.awsstudygroup.com/> |
+| Content Delivery | **CloudFront with S3 Bucket Origin** <br> - Create CloudFront distributions <br> - Configure S3 as an origin <br> - Set up caching behaviors and TTLs <br> - Use cache invalidation for content updates | 05/30/2026 | 05/30/2026 | <https://000094.awsstudygroup.com/> |
 
 # Week 6 Achievements
 

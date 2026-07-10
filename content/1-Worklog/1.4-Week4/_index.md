@@ -17,10 +17,10 @@ pre: " <b> 1.4. </b> "
 
 | Topic | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| Database Services | **Amazon Relational Database Service (Amazon RDS)** <br> - Create and configure RDS instances <br> - Set up Multi-AZ deployments for high availability <br> - Configure automated backups and snapshots <br> - Understand read replicas for scaling reads | 05/11/2026 | 05/17/2026 | <https://000005.awsstudygroup.com/> |
-| Compute & Cost Optimization | **Amazon Lightsail Workshop - Cost Optimization on AWS** <br> - Launch Lightsail instances <br> - Understand Lightsail pricing model <br> - Compare Lightsail with EC2 <br> - Learn cost optimization strategies | 05/11/2026 | 05/17/2026 | <https://000045.awsstudygroup.com/>|
-| Container Services | **Amazon Lightsail Container - Run apps on Lightsail Container** <br> - Deploy containerized applications on Lightsail <br> - Understand container basics <br> - Configure load balancing <br> - Manage container updates | 05/11/2026 | 05/17/2026 | <https://000046.awsstudygroup.com/> |
-| Monitoring & Observability | **AWS CloudWatch Workshop** <br> - Create and monitor metrics <br> - Set up alarms for proactive alerting <br> - Use CloudWatch logs for centralized logging <br> - Create dashboards for visualization | 05/11/2026 | 05/17/2026 | <https://000008.awsstudygroup.com/> |
+| Database Services | **Amazon Relational Database Service (Amazon RDS)** <br> - Create and configure RDS instances <br> - Set up Multi-AZ deployments for high availability <br> - Configure automated backups and snapshots <br> - Understand read replicas for scaling reads | 05/11/2026 | 05/11/2026 | <https://000005.awsstudygroup.com/> |
+| Compute & Cost Optimization | **Amazon Lightsail Workshop - Cost Optimization on AWS** <br> - Launch Lightsail instances <br> - Understand Lightsail pricing model <br> - Compare Lightsail with EC2 <br> - Learn cost optimization strategies | 05/13/2026 | 05/13/2026 | <https://000045.awsstudygroup.com/> |
+| Container Services | **Amazon Lightsail Container - Run apps on Lightsail Container** <br> - Deploy containerized applications on Lightsail <br> - Understand container basics <br> - Configure load balancing <br> - Manage container updates | 05/15/2026 | 05/15/2026 | <https://000046.awsstudygroup.com/> |
+| Monitoring & Observability | **AWS CloudWatch Workshop** <br> - Create and monitor metrics <br> - Set up alarms for proactive alerting <br> - Use CloudWatch logs for centralized logging <br> - Create dashboards for visualization | 05/17/2026 | 05/17/2026 | <https://000008.awsstudygroup.com/> |
 
 # Week 4 Achievements
 
