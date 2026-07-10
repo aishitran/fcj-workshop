@@ -8,59 +8,59 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 Objectives:
 
-* Understand the overall ReviewSentinel system architecture and assigned AWS services.
-* Study authentication and authorization using Amazon Cognito and IAM.
-* Review the DynamoDB data model and event-driven workflow.
-* Learn the responsibilities of Lambda functions within the project.
-* Prepare the Terraform development environment for infrastructure deployment.
-* Get ready for implementing the application infrastructure in Week 12.
+* Prepare the AWS resources required for the ReviewSentinel project based on the approved architecture.
+* Configure authentication and authorization components using Amazon Cognito and IAM.
+* Prepare DynamoDB tables and Amazon S3 buckets for application data.
+* Build the foundation for AWS Lambda integration.
+* Organize the Terraform project structure for infrastructure deployment.
+* Verify the infrastructure configuration before implementation in Week 12.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | **Review ReviewSentinel System Architecture** <br> - Study the interaction between API Gateway, Lambda, DynamoDB, S3, Comprehend, and Bedrock <br> - Understand the overall request and processing flow <br> - Identify AWS resources assigned for implementation | 06/29/2026 | 06/29/2026 | AWS Study Group |
-| 3 | **Study Authentication and Authorization** <br> - Learn Amazon Cognito User Pools <br> - Review JWT authentication flow with API Gateway <br> - Understand IAM least-privilege permissions for Lambda functions | 06/30/2026 | 06/30/2026 | AWS Study Group |
-| 4 | **Review Database Design** <br> - Analyze DynamoDB table structures <br> - Study partition keys, sort keys, and access patterns <br> - Understand S3 event notifications and processing workflow | 07/01/2026 | 07/01/2026 | AWS Study Group |
-| 5 | **Study AWS Lambda Design** <br> - Review Lambda function responsibilities <br> - Understand event sources and execution flow <br> - Learn CloudWatch logging and error handling | 07/02/2026 | 07/02/2026 | AWS Study Group |
-| 6 | **Prepare Terraform Development Environment** <br> - Configure Terraform locally <br> - Review provider, variables, and module structure <br> - Verify the deployment workflow for AWS resources | 07/03/2026 | 07/03/2026 | AWS Study Group |
+| 2 | **Prepare AWS Infrastructure** <br> - Review the approved ReviewSentinel architecture <br> - Verify resource relationships between API Gateway, Lambda, DynamoDB and Amazon S3 <br> - Prepare the AWS resources required for implementation | 06/29/2026 | 06/29/2026 | AWS Study Group |
+| 3 | **Configure Authentication and IAM** <br> - Configure Amazon Cognito User Pool <br> - Prepare IAM Roles and Policies following the least-privilege principle <br> - Verify JWT authentication flow | 06/30/2026 | 06/30/2026 | AWS Study Group |
+| 4 | **Prepare Data Storage Resources** <br> - Create DynamoDB table structures <br> - Prepare Amazon S3 buckets for review storage <br> - Verify event notification configuration | 07/01/2026 | 07/01/2026 | AWS Study Group |
+| 5 | **Prepare Lambda Deployment** <br> - Organize Lambda function structure <br> - Configure environment variables <br> - Prepare CloudWatch logging and error handling | 07/02/2026 | 07/02/2026 | AWS Study Group |
+| 6 | **Organize Terraform Infrastructure** <br> - Update Terraform providers and modules <br> - Prepare the base infrastructure resources <br> - Verify the deployment workflow | 07/03/2026 | 07/03/2026 | AWS Study Group |
 
 # Week 11 Achievements
 
-## System Architecture Review
+## AWS Infrastructure Preparation
 
-- Reviewed the overall **ReviewSentinel** architecture to understand how each AWS service interacts within the application.
-- Identified the responsibilities of API Gateway, AWS Lambda, Amazon DynamoDB, Amazon S3, Amazon Comprehend, and Amazon Bedrock in the complete workflow.
-- Gained a clear understanding of the end-to-end request flow from user submission to sentiment analysis and result storage.
+- Reviewed the approved ReviewSentinel architecture and verified the relationships between API Gateway, AWS Lambda, Amazon DynamoDB, Amazon S3, Amazon Comprehend, and Amazon Bedrock.
+- Prepared the AWS resources required for implementing the project infrastructure.
+- Confirmed that the infrastructure layout follows the planned application workflow.
 
-## Authentication and Security
+## Authentication and Authorization
 
-- Studied **Amazon Cognito** authentication and user management.
-- Understood how **JWT tokens** are validated through API Gateway authorization.
-- Reviewed the **IAM least-privilege** principle and how Lambda functions receive only the permissions required for their assigned tasks.
+- Configured Amazon Cognito User Pool for user authentication.
+- Prepared IAM Roles and Policies based on the least-privilege principle for Lambda functions.
+- Verified the JWT authentication flow between Amazon Cognito and API Gateway.
 
-## Database and Event-driven Workflow
+## Data Storage Preparation
 
-- Analyzed the DynamoDB data model, including **Reviews**, **Products**, and **Users** tables.
-- Learned the expected access patterns used by the application to improve query efficiency.
-- Understood how **Amazon S3 event notifications** trigger Lambda functions for automatic review processing.
+- Prepared the DynamoDB tables required for storing Reviews, Products, and Users.
+- Configured Amazon S3 buckets for storing uploaded review data.
+- Verified the event notification configuration between Amazon S3 and AWS Lambda.
 
-## AWS Lambda Preparation
+## Lambda Preparation
 
-- Reviewed the responsibilities of the project's Lambda functions and their execution flow.
-- Learned how Lambda integrates with API Gateway, DynamoDB Streams, and Amazon S3.
-- Studied CloudWatch logging and basic error-handling practices for serverless applications.
+- Organized the Lambda function structure for the project.
+- Prepared environment variables and execution settings.
+- Configured CloudWatch logging to support monitoring and troubleshooting during implementation.
 
-## Terraform Environment Setup
+## Terraform Infrastructure
 
-- Prepared the local **Terraform** development environment.
-- Reviewed the project structure, including providers, variables, and reusable modules.
-- Verified the workflow for provisioning AWS infrastructure using Infrastructure as Code (IaC).
+- Organized the Terraform project structure using providers, variables, and reusable modules.
+- Prepared the Infrastructure as Code (IaC) configuration for AWS resources.
+- Verified that the deployment workflow is ready for the implementation phase.
 
 ### Theory Summary
 
-- **Amazon Cognito** provides user authentication and authorization using managed user pools and JWT tokens.
-- **AWS Lambda** enables serverless execution based on events from services such as API Gateway, Amazon S3, and DynamoDB Streams.
-- **Amazon DynamoDB** is a fully managed NoSQL database optimized through partition keys, sort keys, and efficient access patterns.
-- **Terraform** is an Infrastructure as Code (IaC) tool that automates AWS resource provisioning through reusable configuration files.
-- **Event-driven architecture** allows AWS services to communicate asynchronously, enabling scalable and loosely coupled applications.
+- **Amazon Cognito** provides secure user authentication and authorization through User Pools and JWT tokens.
+- **AWS Lambda** enables serverless application development by executing code in response to AWS events.
+- **Amazon DynamoDB** is a fully managed NoSQL database designed for high performance and scalability.
+- **Amazon S3** provides durable object storage and can trigger serverless workflows through event notifications.
+- **Terraform** enables Infrastructure as Code (IaC), allowing AWS resources to be deployed and managed consistently through reusable configuration files.
