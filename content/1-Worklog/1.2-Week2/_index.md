@@ -1,57 +1,41 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-04-27
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand networking concepts in AWS and set up a Virtual Private Cloud (VPC).
+* Learn about VPN (Virtual Private Network) and Site-to-Site VPN connections for hybrid connectivity.
+* Get familiar with Amazon EC2 (Elastic Compute Cloud) instances and compute resources.
+* Learn how to launch, configure, and manage EC2 instances.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Topic | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Networking & VPC | **Amazon VPC and AWS Site-to-Site VPN Workshop** <br> - Set up a Virtual Private Cloud (VPC) <br> - Configure subnets (public and private) <br> - Understand route tables and network ACLs <br> - Learn Site-to-Site VPN for hybrid connectivity | 04/27/2026 | 05/03/2026 | [AWS VPC & Site-to-Site VPN](https://000003.awsstudygroup.com/) |
+| Compute | **Introduction to Amazon EC2** <br> - Launch EC2 instances <br> - Understand EC2 instance types and families <br> - Configure security groups and key pairs <br> - Monitor EC2 instances and manage storage | 04/27/2026 | 05/03/2026 | [Introduction to EC2](https://000004.awsstudygroup.com/) |
 
-### Week 2 Achievements:
+# Week 2 Achievements
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## VPC and Networking
+- Successfully set up a Virtual Private Cloud (VPC) with proper subnets and routing configurations.
+- Understood how to configure **public and private subnets** to control traffic flow and improve security.
+- Learned about **Security Groups** (stateful firewall) and **Network ACLs** (stateless firewall) as layers of network protection.
+- Explored **Site-to-Site VPN** connections, which allow secure communication between on-premises networks and AWS infrastructure, essential for hybrid cloud architectures.
 
-* Successfully created and configured an AWS Free Tier account.
+## EC2 Fundamentals
+- Launched and configured **Amazon EC2 instances**, the core compute service in AWS.
+- Understood **instance types** (t2, t3, m5, c5, etc.) and how to choose the right type based on workload requirements (compute-optimized, memory-optimized, general purpose, etc.).
+- Learned about **key pairs** for SSH access and **security groups** for controlling inbound/outbound traffic.
+- Gained hands-on experience with instance lifecycle management (launch, stop, terminate) and monitoring through AWS Management Console.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### Theory Summary
+- **VPC**: An isolated network environment in AWS where you can launch resources with full control over IP addressing, subnets, and routing.
+- **Site-to-Site VPN**: Encrypted connection between on-premises networks and VPC, enabling hybrid cloud scenarios.
+- **EC2**: Provides scalable virtual machines (instances) with various configurations for different workload types.
+- **Security Groups**: Acts as a virtual firewall controlling inbound and outbound traffic at the instance level.
