@@ -1,57 +1,52 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-25
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand NoSQL databases with Amazon DynamoDB.
+* Learn serverless computing with AWS Lambda and cost optimization.
+* Master content delivery with CloudFront.
+* Optimize application performance and reduce latency globally.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Topic | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| NoSQL Database | **Work with Amazon DynamoDB** <br> - Create and manage DynamoDB tables <br> - Understand partition keys and sort keys <br> - Configure read/write capacity modes <br> - Learn about global tables for global distribution | 05/25/2026 | 05/31/2026 | <https://000060.awsstudygroup.com/> |
+| Serverless & Cost Optimization | **Optimizing EC2 Costs with Lambda** <br> - Create Lambda functions for task automation <br> - Use Lambda to replace or supplement EC2 instances <br> - Understand pay-per-execution pricing model <br> - Optimize function performance and duration | 05/25/2026 | 05/31/2026 | <https://000022.awsstudygroup.com/> |
+| Content Delivery | **CloudFront with S3 Bucket Origin** <br> - Create CloudFront distributions <br> - Configure S3 as an origin <br> - Set up caching behaviors and TTLs <br> - Use cache invalidation for content updates | 05/25/2026 | 05/31/2026 | <https://000094.awsstudygroup.com/> |
 
-### Week 6 Achievements:
+# Week 6 Achievements
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## NoSQL with DynamoDB
+- Successfully created and managed **DynamoDB tables** with flexible schema design.
+- Understood the importance of **partition keys and sort keys** for efficient data distribution and querying.
+- Configured **read/write capacity modes**: provisioned (predictable costs) vs on-demand (pay-per-request for variable workloads).
+- Explored **DynamoDB Streams** for capturing changes and triggering other AWS services.
+- Learned about **Global Tables** for multi-region replication and low-latency access globally.
 
-* Successfully created and configured an AWS Free Tier account.
+## Serverless Computing with Lambda
+- Created **AWS Lambda functions** to automate tasks without managing servers.
+- Understood how **Lambda pricing** is based on execution count and duration, making it cost-effective for sporadic workloads.
+- Used **Lambda to replace or supplement EC2 instances** for tasks like scheduled jobs, data processing, and API endpoints.
+- Optimized **function performance** by managing memory allocation, function duration, and dependencies.
+- Learned about **Lambda layers** for sharing code across multiple functions and reducing deployment package size.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+## Content Delivery with CloudFront
+- Created **CloudFront distributions** to cache content closer to end users globally.
+- Configured **S3 buckets as origins** for static content delivery with integrated caching.
+- Set up **caching behaviors** and time-to-live (TTL) values to balance freshness and performance.
+- Used **cache invalidation** to immediately remove stale content when updates are published.
+- Understood **edge locations** and how CloudFront improves performance by serving content from servers closest to users.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### Theory Summary
+- **DynamoDB**: Fully managed NoSQL database offering single-digit millisecond latency and massive scalability, ideal for real-time applications.
+- **Partition Key**: Primary identifier for distributing data across DynamoDB partitions; must be unique and have sufficient cardinality.
+- **Lambda**: Serverless compute service that runs code in response to events without provisioning or managing servers.
+- **CloudFront**: Content Delivery Network (CDN) that caches and serves content from edge locations worldwide, reducing latency.
+- **TTL**: Time-to-Live setting determining how long CloudFront caches content before requesting fresh versions from the origin.
