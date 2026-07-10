@@ -17,8 +17,8 @@ pre: " <b> 1.2. </b> "
 
 | Topic | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| Networking & VPC | **Amazon VPC and AWS Site-to-Site VPN Workshop** <br> - Set up a Virtual Private Cloud (VPC) <br> - Configure subnets (public and private) <br> - Understand route tables and network ACLs <br> - Learn Site-to-Site VPN for hybrid connectivity | 04/27/2026 | 05/03/2026 | <https://000003.awsstudygroup.com/> |
-| Compute | **Introduction to Amazon EC2** <br> - Launch EC2 instances <br> - Understand EC2 instance types and families <br> - Configure security groups and key pairs <br> - Monitor EC2 instances and manage storage | 04/27/2026 | 05/03/2026 | <https://000004.awsstudygroup.com/> |
+| Networking & VPC | **Amazon VPC and AWS Site-to-Site VPN Workshop** <br> - Set up a Virtual Private Cloud (VPC) <br> - Configure subnets (public and private) <br> - Understand route tables and network ACLs <br> - Learn Site-to-Site VPN for hybrid connectivity | 04/27/2026 | 04/27/2026 | <https://000003.awsstudygroup.com/> |
+| Compute | **Introduction to Amazon EC2** <br> - Launch EC2 instances <br> - Understand EC2 instance types and families <br> - Configure security groups and key pairs <br> - Monitor EC2 instances and manage storage | 04/30/2026 | 04/30/2026 | <https://000004.awsstudygroup.com/> |
 
 # Week 2 Achievements
 
