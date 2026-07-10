@@ -1,57 +1,43 @@
 ---
 title: "Week 3 Worklog"
-date: 2024-01-01
+date: 2026-05-04
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn AWS Identity and Access Management (IAM) and security best practices.
+* Understand how to grant applications access to AWS services using IAM roles.
+* Get started with Amazon S3 (Simple Storage Service) for object storage.
+* Learn about S3 buckets, permissions, and data management.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Topic | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Identity & Access Management | **Granting authorization for an application to access AWS services with an IAM role** <br> - Create IAM roles and policies <br> - Understand the principle of least privilege <br> - Assign roles to EC2 instances <br> - Configure cross-account access | 05/04/2026 | 05/10/2026 | <https://000048.awsstudygroup.com/> |
+| Object Storage | **Starting with Amazon S3** <br> - Create and configure S3 buckets <br> - Upload and manage objects <br> - Configure bucket policies and ACLs <br> - Enable versioning and static website hosting | 05/04/2026 | 05/10/2026 | <https://000057.awsstudygroup.com/> |
 
-### Week 3 Achievements:
+# Week 3 Achievements
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Identity & Access Management
+- Successfully created **IAM roles** and attached **policies** to grant applications permission to access AWS services.
+- Understood the critical security principle of **least privilege** - giving users/services only the minimum permissions needed for their tasks.
+- Learned how to attach **IAM roles to EC2 instances**, allowing applications running on those instances to access other AWS services (S3, RDS, etc.) without storing credentials.
+- Explored **trust relationships** and how to enable cross-account access for more complex architectures.
 
-* Successfully created and configured an AWS Free Tier account.
+## Amazon S3 Fundamentals
+- Set up **S3 buckets** as containers for storing objects (files) in AWS.
+- Learned about **S3 storage classes** and when to use different tiers for cost optimization.
+- Configured **bucket policies** (resource-based permissions) and **ACLs** (Access Control Lists) to control who can access objects.
+- Enabled **versioning** to maintain multiple versions of objects for data protection and recovery.
+- Explored **static website hosting** capability to serve websites directly from S3 buckets.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### Theory Summary
+- **IAM**: Identity and Access Management service for controlling who can do what with AWS resources, using users, groups, roles, and policies.
+- **IAM Roles**: Temporary credentials granted to services/applications, safer than storing long-lived access keys.
+- **S3 Buckets**: Globally unique containers for storing objects, with comprehensive permission and configuration options.
+- **Least Privilege**: Security best practice of granting only the minimum necessary permissions to perform a task.
+- **S3 Versioning**: Maintains multiple versions of objects, providing protection against accidental deletion.
