@@ -63,7 +63,7 @@ Theo cách tiếp cận của AWS, việc kiểm tra chất lượng dữ liệu
 
 Sự kết hợp giữa **Amazon S3 Tables**, **Apache Iceberg**, **AWS Glue Data Quality**, **AWS Glue Data Catalog** và **Amazon SageMaker Unified Studio** giúp xây dựng một pipeline dữ liệu đáng tin cậy hơn, đồng thời giảm công sức kiểm tra thủ công và hỗ trợ tốt cho các hệ thống phân tích cũng như AI/ML.
 
-![Solution architecture](/fcj-workshop/images/3-BlogsTranslated/Blog2.jpg)
+![Solution architecture](/fcj-workshop/images/3-BlogsTranslated/glue_data_quality_at_rest_iceberg_blog_post.jpg)
 
 [Facebook Post (AWS Study Group)](https://www.facebook.com/photo/?fbid=2529147894181976&set=gm.2199841160780844&idorvanity=660548818043427)
 
