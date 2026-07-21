@@ -26,7 +26,7 @@ A new **AWS Compute Blog** post shares how to build an **automated multi-region 
 
 **Route 53 health-based failover** is a powerful mechanism that provides maximum operational flexibility, supporting both **planned maintenance** and **unplanned regional outages** for enterprise applications. This approach is highly recommended for those building event-driven architectures that require high availability or multi-region HA/DR solutions on AWS.
 
-![Solution Diagram](/fcj-workshop/images/3-BlogsTranslated/Blog1.png)
+![Solution Diagram](/fcj-workshop/images/3-BlogsTranslated/Blog1.jpg)
 
 [Facebook Post (AWS Study Group)](https://www.facebook.com/photo?fbid=2216858689065550&set=gm.2174291026669191&idorvanity=660548818043427)
 
