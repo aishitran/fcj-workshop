@@ -1,5 +1,5 @@
 ---
-title: "Blog 3: How Artera Uses AWS to Accelerate Prostate Cancer Diagnosis"
+title: "Blog 3: How Artera Uses AWS to Accelerate Prostate Cancer Diagnosis" 
 date: 2026-06-18
 weight: 3
 chapter: false
