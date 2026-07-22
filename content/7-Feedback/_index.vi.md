@@ -24,7 +24,7 @@ Trong quá trình thực tập, mình học được nhiều kỹ năng mới nh
 Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
 
 **6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+Chính sách thực tập thân thiện và sự hỗ trợ mà công ty dành cho thực tập sinh, đặc biệt là sự linh hoạt khi cần thiết. Bên cạnh đó, cơ hội tham gia các buổi đào tạo cũng mang lại nhiều giá trị và góp phần giúp trải nghiệm thực tập của tôi trở nên ý nghĩa hơn.
 
 
 ### Một số câu hỏi khác
