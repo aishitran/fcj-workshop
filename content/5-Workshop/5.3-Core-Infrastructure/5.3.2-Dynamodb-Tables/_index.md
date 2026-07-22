@@ -1,95 +1,110 @@
 ---
-title : "Test the Gateway Endpoint"
-date : 2024-01-01 
-weight : 2
-chapter : false
-pre : " <b> 5.3.2 </b> "
+title: "5.3.2 DynamoDB tables"
+weight: 2
 ---
 
-#### Create S3 bucket
+# DynamoDB tables for ReviewSentinal
 
-1. Navigate to **S3 management console**
-2. In the Bucket console, choose **Create bucket**
+## Overview
 
-![Create bucket](/images/5-Workshop/5.3-S3-vpc/create-bucket.png)
+Create the three tables that hold review data, product data, and user data. The `Reviews` table is the main one and needs streams plus a GSI. Additionally, create an `Analyses` table to track analysis jobs.
 
-3. In **the Create bucket console**
-+ **Name the bucket**: choose a name that hasn't been given to any bucket globally (hint: lab number and your name)
+### Tables to create
 
-![Bucket name](/images/5-Workshop/5.3-S3-vpc/bucket-name.png)
+- `Analyses`
+- `Reviews`
+- `Products`
+- `Users`
 
-+ Leave other fields as they are (default)
-+ Scroll down and choose **Create bucket**
+### Analyses table
 
-![Create](/images/5-Workshop/5.3-S3-vpc/create-button.png) 
+1. Open DynamoDB and choose **Create table**.
+2. Table name: `Analyses`.
+3. Partition key: `AnalysisID` as a String.
+4. Choose **Customize**.
+5. Set capacity to **On-demand**.
+6. Leave encryption as the default DynamoDB-managed key.
+7. Create the table.
 
-+ Successfully create S3 bucket.
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-1.PNG)
 
-![Success](/images/5-Workshop/5.3-S3-vpc/bucket-success.png)
+### Reviews table
 
-#### Connect to EC2 with session manager
+1. Open DynamoDB and choose **Create table**.
+2. Table name: `Reviews`.
+3. Partition key: `ProductID` as a String.
+4. Sort key: `ReviewID` as a String.
+5. Choose **Customize**.
+6. Set capacity to **On-demand**.
+7. Leave encryption as the default DynamoDB-managed key.
+8. Create the table.
 
-+ For this workshop, you will use **AWS Session Manager** to access several **EC2 instances**. **Session Manager** is a fully managed **AWS Systems Manager** capability that allows you to manage your **Amazon EC2 instances**  and on-premises virtual machines (VMs) through an interactive one-click browser-based shell. Session Manager provides secure and auditable instance management without the need to open inbound ports, maintain bastion hosts, or manage SSH keys.
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-2.PNG)
 
-+ First cloud journey [Lab](https://000058.awsstudygroup.com/1-introduce/) for indepth understanding of Session manager.
+After creation:
 
-1. In the **AWS Management Console**, start typing ```Systems Manager``` in the quick search box and press **Enter**:
+1. Open the `Reviews` table.
+2. Enable **DynamoDB Streams** from the **Exports and streams** tab.
 
-![system manager](/images/5-Workshop/5.3-S3-vpc/sm.png)
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-3.PNG)
 
-2. From the **Systems Manager** menu, find **Node Management** in the left menu and click **Session Manager**:
+3. Choose **New image** as the stream view type.
+4. Go to the **Backups** tab and enable **Point-in-time recovery**.
 
-![system manager](/images/5-Workshop/5.3-S3-vpc/sm1.png)
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-4.PNG)
 
-3. Click **Start Session**, and select **the EC2 instance** named **Test-Gateway-Endpoint**. 
-{{% notice info %}}
-This EC2 instance is already running in "VPC Cloud" and will be used to test connectivity to Amazon S3 through the Gateway endpoint you just created (s3-gwe). {{% /notice %}}
+4. Go to the **Indexes** tab.
+5. Create a Global Secondary Index named `SentimentIndex` on the `Reviews` table:
+   - Partition key: `ProductID` (String)
+   - Sort key: `Sentiment`
 
-![Start session](/images/5-Workshop/5.3-S3-vpc/start-session.png)
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-5.PNG)
 
-**Session Manager** will open a new browser tab with a shell prompt: sh-4.2 $
+   - Projected attributes: `ReviewText`, `Rating`, `CreatedAt`, `KeyPhrases`, and `UserID`
 
-![Success](/images/5-Workshop/5.3-S3-vpc/start-session-success.png)
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-6.PNG)
 
-You have successfully start a session - connect to the EC2 instance in VPC cloud. In the next step, we will create a S3 bucket and a file in it. 
+6. Create a Global Secondary Index named `AnalysisIndex` on the `Reviews` table:
+   - Partition key: `AnalysisID` (String)
+   - Sort key: `Leave blank` (or use `ReviewID` if sorting within analysis is needed)
 
-#### Create a file and upload to s3 bucket
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-7.PNG)
 
-1. Change to the ssm-user's home directory by typing ```cd ~``` in the CLI
+   - Projected attributes: `KEYS_ONLY` (or `ALL` if needed for your queries)
 
-![Change user's dir](/images/5-Workshop/5.3-S3-vpc/cli1.png)
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-8.PNG)
 
-2. Create a new file to use for testing with the command ```fallocate -l 1G testfile.xyz```, which will create a file of 1GB size named "testfile.xyz".
+### Products table
 
-![Create file](/images/5-Workshop/5.3-S3-vpc/cli-file.png)
+1. Create a table named `Products`.
+2. Use `ProductID` as the partition key.
+3. Leave out the sort key.
+4. Use **On-demand** capacity.
+5. Enable point-in-time recovery after creation.
 
-3. Upload file to S3 bucket with command ```aws s3 cp testfile.xyz s3://your-bucket-name```. Replace your-bucket-name with the name of S3 bucket that you created earlier.
+### Users table
 
-![Uploaded](/images/5-Workshop/5.3-S3-vpc/uploaded.png)
+1. Create a table named `Users`.
+2. Use `UserID` as the partition key.
+3. Leave out the sort key.
+4. Use **On-demand** capacity.
+5. Enable point-in-time recovery after creation.
 
-You have successfully uploaded the file to your S3 bucket. You can now terminate the session.
+![Guide](/fcj-workshop/images/5-Workshop/dynamodb-9.PNG)
 
-#### Check object in S3 bucket
+### Notes
 
-1. Navigate to S3 console.  
-2. Click the name of your s3 bucket
-3. In the Bucket console, you will see the file you have uploaded to your S3 bucket
+- The `Reviews` table stream is needed for the sentiment analyzer Lambda trigger.
+- Keep the table names exact because later environment variables and IAM policies reference them directly.
+- The GSIs are kept minimal on purpose so you only pay for what the code uses.
+- The `AnalysisID` attribute in `Reviews` is additive - it doesn't change the existing table schema, so existing data is unaffected.
 
-![Check S3](/images/5-Workshop/5.3-S3-vpc/check-s3-bucket.png)
+### Expected result
 
-#### Section summary
-
-Congratulation on completing access to S3 from VPC. In this section, you created a Gateway endpoint for Amazon S3, and used the AWS CLI to upload an object. The upload worked because the Gateway endpoint allowed communication to S3, without needing an Internet Gateway attached to "VPC Cloud". This demonstrates the functionality of the Gateway endpoint as a secure path to S3 without traversing the Public Internet.
-
-
-
-
-
-
-
-
-
-
-
-
-
+Four tables should exist: `Analyses`, `Reviews`, `Products`, and `Users`.
+- `Reviews` and `Analyses` should have streams enabled (for `Reviews` - needed for Lambda trigger)
+- All tables should be on-demand with point-in-time recovery enabled
+- `Reviews` table has:
+  * Original primary key (ProductID, ReviewID)
+  * GSIs: `SentimentIndex` and `AnalysisIndex`
+  * Items include an `AnalysisID` attribute (added by the application)
