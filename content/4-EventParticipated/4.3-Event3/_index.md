@@ -5,6 +5,7 @@ weight: 3
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
+![Proof](/fcj-workshop/images/4-EventParticipated/form-fcaj.jpg)
 
 ### **1. Speaker 1 (Nguyen Gia Hung): Labor Market Trends and the Importance of Strong Foundations**
 

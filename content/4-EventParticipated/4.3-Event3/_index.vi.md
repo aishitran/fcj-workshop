@@ -1,5 +1,4 @@
 ---
-
 title: "Event 3: FCAJ Community Day - 27/06/2026 (Online)"
 date: 27-06-2026
 weight: 3
@@ -7,62 +6,62 @@ chapter: false
 pre: " <b> 4.3. </b> "
 ----------------------
 
-![Proof](/fcj-workshop/images/4-EventParticipated/20260627.jpg)
+![Proof](/fcj-workshop/images/4-EventParticipated/form-fcaj.jpg)
 
-### **1. Speaker 1 (Steve Tran): AgenticOps for your Cloud**
+### **1. Diễn giả 1 (Steve Tran): AgenticOps cho Cloud**
 
-* **Increasing cloud operational complexity:** As systems evolve from **Microservices** toward environments with more advanced **Observability** requirements, the number of tools and operational tasks also increases. This creates a **"Complexity Wall"**, while also increasing the demand for cloud operations engineers and the time required to resolve incidents (**MTTR**).
+* **Độ phức tạp vận hành cloud ngày càng tăng:** Khi hệ thống phát triển từ **Microservices** sang các môi trường có yêu cầu **Observability** cao hơn, số lượng công cụ và tác vụ vận hành cũng tăng theo. Điều này tạo ra một **"Bức tường phức tạp" (Complexity Wall)**, đồng thời làm tăng nhu cầu về kỹ sư vận hành cloud cũng như thời gian cần thiết để xử lý sự cố (**MTTR**).
 
-* **CloudThinker:** An enterprise AgenticOps platform that uses AI agents to observe cloud environments, analyze system conditions, and assist with operational issues.
+* **CloudThinker:** Một nền tảng AgenticOps dành cho doanh nghiệp, sử dụng các AI agent để quan sát môi trường cloud, phân tích tình trạng hệ thống và hỗ trợ xử lý các vấn đề vận hành.
 
-  * Supports incident response, security-related tasks, and cost optimization.
-  * Provides specialized agents for different operational roles and tasks.
-  * Continuously observes the environment to collect context and determine appropriate actions.
-  * Applies **context optimization** to reduce unnecessary context and control costs in multi-agent systems.
-  * Follows the **Detect → Resolve → Validate** operational cycle, while important actions may still require human approval and must comply with SLA requirements.
+  * Hỗ trợ ứng phó sự cố, các tác vụ liên quan đến bảo mật và tối ưu chi phí.
+  * Cung cấp các agent chuyên biệt cho từng vai trò và tác vụ vận hành khác nhau.
+  * Liên tục quan sát môi trường để thu thập ngữ cảnh và xác định hành động phù hợp.
+  * Áp dụng **tối ưu ngữ cảnh (context optimization)** nhằm giảm bớt ngữ cảnh không cần thiết và kiểm soát chi phí trong hệ thống multi-agent.
+  * Tuân theo chu trình vận hành **Detect → Resolve → Validate** (Phát hiện → Xử lý → Xác thực), trong đó các hành động quan trọng vẫn có thể cần con người phê duyệt và phải tuân thủ các yêu cầu SLA.
 
-### **2. Speakers 2 (Trung Vu, Nghi Danh, Kiet Tran): Building Voice Agent (VA) at Scale**
+### **2. Diễn giả 2 (Trung Vu, Nghi Danh, Kiet Tran): Xây dựng Voice Agent (VA) ở quy mô lớn**
 
-* **Speech-to-speech:** Current speech-to-speech technology is still not fully ready for widespread production deployment.
+* **Speech-to-speech:** Công nghệ speech-to-speech hiện tại vẫn chưa thực sự sẵn sàng để triển khai rộng rãi trong môi trường production.
 
-* **Practical approach:** Combining **TTS (Text-to-Speech)** with fine-tuned models to produce more natural speech and a more human-like communication experience.
+* **Cách tiếp cận thực tế:** Kết hợp **TTS (Text-to-Speech)** với các mô hình đã được fine-tune để tạo ra giọng nói tự nhiên hơn và trải nghiệm giao tiếp giống con người hơn.
 
-* **Latency reduction:** Performing model **warm-up** before processing requests to improve response time.
+* **Giảm độ trễ (latency):** Thực hiện **warm-up** mô hình trước khi xử lý request nhằm cải thiện thời gian phản hồi.
 
-* **Observability for Voice Agents:** A complete system of metrics, tracing, and observability is required to monitor model behavior, identify issues, and support continuous improvement.
+* **Observability cho Voice Agent:** Cần một hệ thống hoàn chỉnh gồm metrics, tracing và observability để theo dõi hành vi của mô hình, phát hiện vấn đề và hỗ trợ cải tiến liên tục.
 
-### **3. Speakers 3 (Bao Phan, Nguyen Nguyen): AWS DevOps Agent**
+### **3. Diễn giả 3 (Bao Phan, Nguyen Nguyen): AWS DevOps Agent**
 
-* **Limitations of traditional incident response:** Manual investigation requires significant time and cost, while **MTTD** and **MTTR** can remain high. Important context may also be lost during handoffs between teams.
+* **Hạn chế của phương pháp ứng phó sự cố truyền thống:** Việc điều tra thủ công tốn nhiều thời gian và chi phí, trong khi **MTTD** và **MTTR** vẫn có thể ở mức cao. Ngữ cảnh quan trọng cũng có thể bị mất trong quá trình bàn giao giữa các nhóm.
 
-* **AWS DevOps Agent:** An AI agent designed to support the automation of incident investigation and response, while also helping proactively suggest ways to prevent similar incidents in the future.
+* **AWS DevOps Agent:** Một AI agent được thiết kế để hỗ trợ tự động hóa việc điều tra và ứng phó sự cố, đồng thời chủ động đề xuất các biện pháp phòng ngừa sự cố tương tự trong tương lai.
 
-* **Key principles:** The solution focuses on **Context Learning, Control, Integration, Collaboration**, and **Cost-effectiveness**.
+* **Nguyên tắc cốt lõi:** Giải pháp tập trung vào **Context Learning, Control, Integration, Collaboration** và **Cost-effectiveness** (Học ngữ cảnh, Kiểm soát, Tích hợp, Cộng tác và Hiệu quả chi phí).
 
-* **Incident response lifecycle:** The process follows **Triage → Investigation → Mitigation → Prevention**, covering incident classification, investigation, impact reduction, and prevention.
+* **Vòng đời ứng phó sự cố:** Quy trình gồm **Triage → Investigation → Mitigation → Prevention** (Phân loại → Điều tra → Giảm thiểu → Phòng ngừa), bao gồm phân loại sự cố, điều tra, giảm thiểu tác động và phòng ngừa.
 
-* **Suitable environment:** The solution works more effectively in systems with mature observability, including well-organized logs, metrics, and alarms. The AI agent can summarize context and recommend next steps, while humans remain responsible for reviewing, approving, and making final decisions.
+* **Môi trường phù hợp:** Giải pháp hoạt động hiệu quả hơn trong các hệ thống đã có observability trưởng thành, với logs, metrics và alarms được tổ chức tốt. AI agent có thể tóm tắt ngữ cảnh và đề xuất bước tiếp theo, trong khi con người vẫn chịu trách nhiệm xem xét, phê duyệt và đưa ra quyết định cuối cùng.
 
-### **4. Speakers 4 (Truong Tran, Anh Minh): AI-Powered Productivity Workforce Planning for Enterprise**
+### **4. Diễn giả 4 (Truong Tran, Anh Minh): AI-Powered Productivity Workforce Planning cho Doanh nghiệp**
 
-* **Challenges in traditional HR:** Manual processes often require significant time, may overlook valuable talent, and can rely heavily on subjective judgment rather than data.
+* **Thách thức trong HR truyền thống:** Các quy trình thủ công thường tốn nhiều thời gian, có thể bỏ sót nhân tài giá trị, và dễ phụ thuộc vào đánh giá chủ quan thay vì dữ liệu.
 
-* **The role of AI:** Reducing manual screening and processing tasks, supporting data-driven HR decisions, and allowing more focus on talent development and workforce strategy.
+* **Vai trò của AI:** Giảm bớt các tác vụ sàng lọc và xử lý thủ công, hỗ trợ ra quyết định HR dựa trên dữ liệu, và giúp tập trung nhiều hơn vào phát triển nhân tài cũng như chiến lược nhân sự.
 
-* **Amazon Quick Solutions:** Tools such as **Chat Agents, Research, QuickSight, Flows**, and **Automate** support data processing, report generation, data visualization, and multi-step workflow automation.
+* **Amazon Quick Solutions:** Các công cụ như **Chat Agents, Research, QuickSight, Flows** và **Automate** hỗ trợ xử lý dữ liệu, tạo báo cáo, trực quan hóa dữ liệu và tự động hóa quy trình nhiều bước.
 
-* **HR use cases:** Connecting data → analyzing information → generating reports and visualizations → evaluating candidates → following up on subsequent actions.
+* **Các trường hợp sử dụng trong HR:** Kết nối dữ liệu → phân tích thông tin → tạo báo cáo và biểu đồ trực quan → đánh giá ứng viên → theo dõi các hành động tiếp theo.
 
-* **Recruitment support:** AI can generate interview questions based on hiring objectives, assist with candidate evaluation, and provide recommendations for HR to consider during the decision-making process.
+* **Hỗ trợ tuyển dụng:** AI có thể tạo câu hỏi phỏng vấn dựa trên mục tiêu tuyển dụng, hỗ trợ đánh giá ứng viên, và đưa ra khuyến nghị để bộ phận HR tham khảo trong quá trình ra quyết định.
 
-### **5. Speakers 5 (Toan Nguyen, Nghi Danh): Building Secure Private MCP for AWS Quick**
+### **5. Diễn giả 5 (Toan Nguyen, Nghi Danh): Xây dựng Private MCP an toàn cho AWS Quick**
 
-* **Amazon Quick and MCP:** An overview of Amazon Quick and the **Model Context Protocol (MCP)**, including the role of MCP in connecting AI systems with external services.
+* **Amazon Quick và MCP:** Tổng quan về Amazon Quick và **Model Context Protocol (MCP)**, bao gồm vai trò của MCP trong việc kết nối các hệ thống AI với dịch vụ bên ngoài.
 
-* **The public endpoint challenge:** The default MCP connector requires a **public endpoint**, which may cause context and logs to travel through the public internet. This increases the **attack surface** and introduces additional security concerns.
+* **Thách thức từ public endpoint:** MCP connector mặc định yêu cầu **public endpoint**, điều này có thể khiến ngữ cảnh và log phải đi qua internet công cộng. Điều này làm tăng **bề mặt tấn công (attack surface)** và phát sinh thêm các vấn đề bảo mật.
 
-* **Private VPC connectivity:** A private MCP architecture can be used to reduce exposure to the public internet.
+* **Kết nối Private VPC:** Có thể sử dụng kiến trúc private MCP để giảm mức độ tiếp xúc với internet công cộng.
 
-  * **Private Entry:** Removes the dependency on a public endpoint.
-  * **Private DNS:** The hostname is resolved only within the VPC's internal network.
-  * **Private traffic flow:** Traffic follows the **ENI → ALB → MCP** path, keeping the connection within a private network environment and reducing exposure to the public internet.
+  * **Private Entry:** Loại bỏ sự phụ thuộc vào public endpoint.
+  * **Private DNS:** Hostname chỉ được phân giải trong mạng nội bộ của VPC.
+  * **Luồng traffic riêng tư:** Traffic đi theo đường **ENI → ALB → MCP**, giữ kết nối trong môi trường mạng riêng tư và giảm mức độ tiếp xúc với internet công cộng.
