@@ -1,6 +1,6 @@
 ---
 title: "Translated Blogs"
-date: 2026-06-03
+date: 2024-01-01
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
@@ -12,5 +12,5 @@ This blog post explores how to design and implement a **resilient, automated mul
 ###  [Blog 2 - Automating data quality control in a Lakehouse architecture with AWS](3.2-Blog2/)
 This blog post explores how to build an **automated data quality pipeline** for a Lakehouse architecture using AWS services. You will learn how to combine **Amazon S3 Tables, Apache Iceberg, AWS Glue Data Quality, AWS Glue Data Catalog, and Amazon SageMaker Unified Studio** to validate data in-line with ingestion, catching issues before they reach dashboards, ML models, or business decisions.
 
-### [Blog 3 - How Artera Uses AWS to Accelerate Prostate Cancer Diagnosis](3.3-Blog3/)
-This blog explores how **Artera** leverages AWS to build an AI-powered platform for analyzing biopsy images, enabling faster and more accurate **prostate cancer diagnosis**. You'll discover how services such as **Amazon ECS, Amazon EKS, Amazon EFS, Amazon RDS, Amazon S3, AWS Global Accelerator, and Application Load Balancer** are combined to process massive medical imaging datasets while ensuring scalability, security, and compliance with regional data residency requirements.
+###  [Blog 3 - How Artera Uses AWS to Accelerate Prostate Cancer Diagnosis](3.3-Blog3/)
+This blog from the AWS Architecture Blog explains how **Artera**, a healthcare technology company, built an AI-powered platform to analyze biopsy images for predicting prostate cancer severity and patient response to treatment. Its **ArteraAI Prostate Test** has received FDA De Novo authorization, making it the first AI software approved for this purpose.

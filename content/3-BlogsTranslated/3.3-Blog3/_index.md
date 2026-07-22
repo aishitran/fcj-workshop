@@ -1,5 +1,5 @@
 ---
-title: "Blog 3: How Artera Uses AWS to Accelerate Prostate Cancer Diagnosis" 
+title: "Blog 3: How Artera Uses AWS to Accelerate Prostate Cancer Diagnosis"
 date: 2026-06-18
 weight: 3
 chapter: false
@@ -59,7 +59,7 @@ The combination of **Amazon ECS** for the web application layer and **Amazon EKS
 
 For anyone interested in AI-powered healthcare systems or large-scale medical image processing on AWS, this article is definitely worth reading.
 
-![Solution Diagram](/Workshop/images/3-BlogsTranslated/ARCH-13411.png)
+![Solution Diagram](/fcj-workshop/images/3-BlogsTranslated/Blog3.png)
 
 Facebook Post (AWS Study Group - Pending Approval - Scheduled for July 18, 2026)
 
