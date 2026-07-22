@@ -59,7 +59,7 @@ The combination of **Amazon ECS** for the web application layer and **Amazon EKS
 
 For anyone interested in AI-powered healthcare systems or large-scale medical image processing on AWS, this article is definitely worth reading.
 
-![Solution Diagram](/fcj-workshop/images/3-BlogsTranslated/Blog3.png)
+![Solution Diagram](/fcj-workshop/images/3-BlogsTranslated/ARCH-13411.png)
 
 Facebook Post (AWS Study Group - Pending Approval - Scheduled for July 18, 2026)
 

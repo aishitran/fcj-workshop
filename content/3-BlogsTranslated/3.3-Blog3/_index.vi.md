@@ -59,7 +59,7 @@ Việc kết hợp **Amazon ECS** cho tầng ứng dụng web và **Amazon EKS**
 
 Nếu quan tâm đến kiến trúc AI trong lĩnh vực y tế hoặc các giải pháp xử lý dữ liệu ảnh quy mô lớn trên AWS, đây là một bài viết rất đáng đọc.
 
-![Solution Diagram](/fcj-workshop/images/3-BlogsTranslated/Blog3.png)
+![Solution Diagram](/fcj-workshop/images/3-BlogsTranslated/ARCH-13411.png)
 
 Facebook Post (AWS Study Group - Chờ duyệt - Ngày đăng 18/07/2026)
 
