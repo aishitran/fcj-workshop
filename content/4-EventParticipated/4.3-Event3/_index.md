@@ -1,55 +1,67 @@
 ---
-title: "Event 3: FCAJ Community Day - 2026-06-27 (Online)"
-date: 2026-06-27
+title: "Event 3: FCAJ Community Day - 27/06/2026 (Online)"
+date: 27-06-2026
 weight: 3
 chapter: false
-pre: " <b> 4.2. </b> "
----
+pre: " <b> 4.3. </b> "
+----------------------
+
 ![Proof](/fcj-workshop/images/4-EventParticipated/form-fcaj.jpg)
 
-### **1. Speaker 1 (Nguyen Gia Hung): Labor Market Trends and the Importance of Strong Foundations**
+### **1. Speaker 1 (Steve Tran): AgenticOps for Cloud**
 
-*   **Key Takeaways:**
-    *   **The AI Paradox:** As AI makes software development more affordable, the demand for software continues to grow significantly. This expansion also creates new career opportunities, including maintaining and improving AI-generated code.
-    *   **What the Market Expects:** A simple demo is no longer enough. Students should try to build practical products that solve specific business problems, such as real-world banking operations.
-    *   **Long-Term Value:** A university degree and strong fundamental knowledge remain highly valuable when competing in the global market. AI should be viewed as a force multiplier for people who already possess solid skills.
+* **Increasing cloud operational complexity:** As systems evolve from **Microservices** toward environments with more advanced **Observability** requirements, the number of tools and operational tasks also increases. This creates a **"Complexity Wall"**, while also increasing the demand for cloud operations engineers and the time required to resolve incidents (**MTTR**).
 
-### **2. Speaker 2 (Tinh Truong): Context Is Everything - Making AI Work Effectively for You**
+* **CloudThinker:** An enterprise AgenticOps platform that uses AI agents to observe cloud environments, analyze system conditions, and assist with operational issues.
 
-*   **Key Takeaways:**
-    *   **The "Internet Buller" Problem:** Copying code directly from the internet or AI without understanding its context can result in fragmented systems that do not follow an organization's technical standards or development practices.
-    *   **Providing the Right Context:** To obtain more accurate results, AI should be given specialized, domain-specific information rather than only relying on generic knowledge that is already widely available online.
-    *   **AI Mindset and Adoption:** Developers should learn how leading companies integrate AI into their actual workflows instead of limiting its use to solving assignments or generating simple code snippets.
+  * Supports incident response, security-related tasks, and cost optimization.
+  * Provides specialized agents for different operational roles and tasks.
+  * Continuously observes the environment to collect context and determine appropriate actions.
+  * Applies **context optimization** to reduce unnecessary context and control costs in multi-agent systems.
+  * Follows the **Detect → Resolve → Validate** operational cycle, while important actions may still require human approval and must comply with SLA requirements.
 
-### **3. Speaker 3 (Pham Nguyen Hai Anh): GenAI-Powered Auto Audit for AWS Workloads**
+### **2. Speakers 2 (Trung Vu, Nghi Danh, Kiet Tran): Building Voice Agent (VA) at Scale**
 
-*   **Key Takeaways:**
-    *   **What Is an Agent?:** An Agent can be understood as an **LLM brain** combined with **actions and tools as extended capabilities**. Unlike a traditional chatbot, an Agent can perform real-world tasks such as scheduling appointments or sending emails.
-    *   **Amazon QuickSight:** This service allows non-technical users to explore data and create reports from sources such as Excel files by interacting with the system using natural language.
+* **Speech-to-speech:** Current speech-to-speech technology is still not fully ready for widespread production deployment.
 
-### **4. Speaker 4 (Nguyen Tuan Thinh): CloudFront as Your Foundation**
+* **Practical approach:** Combining **TTS (Text-to-Speech)** with fine-tuned models to produce more natural speech and a more human-like communication experience.
 
-*   **Key Takeaways:**
-    *   **Flat-Rate Pricing:** The new pricing approach helps organizations reduce the risk of unexpectedly high bills caused by DDoS attacks or sudden traffic spikes.
-    *   **Improved Performance:** By taking advantage of AWS's internal fiber-optic backbone and HTTP/3, CloudFront can significantly improve page loading performance, with the presentation highlighting an 81% reduction in loading time.
-    *   **Security at the Edge:** The session introduced technologies such as mTLS (Mutual TLS) for applications requiring two-way authentication, as well as VPC Origin, which helps keep backend infrastructure hidden from direct internet exposure.
+* **Latency reduction:** Performing model **warm-up** before processing requests to improve response time.
 
-### **5. Speaker 5 (UTMorpho): Building UTMorpho from Idea to Reality - 36 Hours with LotusHacks**
+* **Observability for Voice Agents:** A complete system of metrics, tracing, and observability is required to monitor model behavior, identify issues, and support continuous improvement.
 
-*   **Key Takeaways:**
-    *   **The UTMorpho Project:** UTMorpho is an AI-powered UI editing tool that enables users to interact directly with interface elements instead of regenerating the entire UI from scratch.
-    *   **Multi-Agent Architecture:** The system uses three specialized agents: **Vision** for image analysis, **Layout** for determining the interface structure, and **Design** for generating the corresponding code.
-    *   **Practical Lessons:** The project demonstrated how to deal with token limitations, prevent excessive AI-generated output, and maintain a strong focus on the core MVP features.
+### **3. Speakers 3 (Bao Phan, Nguyen Nguyen): AWS DevOps Agent**
 
-### **6. Speaker 6 (Duc Dao): The Non-Deterministic Nature of "Deterministic" LLM Settings**
+* **Limitations of traditional incident response:** Manual investigation requires significant time and cost, while **MTTD** and **MTTR** can remain high. Important context may also be lost during handoffs between teams.
 
-*   **Key Takeaways:**
-    *   **A Probabilistic Foundation:** An LLM generates text by predicting the next token based on probability distributions and logits.
-    *   **Optimization Bias:** Providers such as OpenAI and AWS may combine multiple prompts to optimize GPU utilization. As a result, the output can still vary even when the Temperature parameter is set to zero.
-    *   **Recommended Strategies:** JSON Mode can help achieve more structured responses. For situations requiring maximum control, self-hosting a model may be considered. Regardless of the approach, systems should always be designed to handle unexpected AI responses.
+* **AWS DevOps Agent:** An AI agent designed to support the automation of incident investigation and response, while also helping proactively suggest ways to prevent similar incidents in the future.
 
-### **7. Speaker 7 (Vy Lam): Enterprise-Grade Multi-Agent Systems**
+* **Key principles:** The solution focuses on **Context Learning, Control, Integration, Collaboration**, and **Cost-effectiveness**.
 
-*   **Key Takeaways:**
-    *   **Addressing Real-World Business Problems:** Startups may not have complete three-year financial reports. AI systems can support evaluation by collecting and analyzing multiple dimensions of information, including market conditions, the founding team, and intellectual property.
-    *   **Risk Management and Guardrails:** Security is a critical priority in enterprise environments. Agents should operate within clearly defined boundaries, while audit trails should be maintained to make AI decisions traceable and reviewable.
+* **Incident response lifecycle:** The process follows **Triage → Investigation → Mitigation → Prevention**, covering incident classification, investigation, impact reduction, and prevention.
+
+* **Suitable environment:** The solution works more effectively in systems with mature observability, including well-organized logs, metrics, and alarms. The AI agent can summarize context and recommend next steps, while humans remain responsible for reviewing, approving, and making final decisions.
+
+### **4. Speakers 4 (Truong Tran, Anh Minh): AI-Powered Productivity Workforce Planning for Enterprise**
+
+* **Challenges in traditional HR:** Manual processes often require significant time, may overlook valuable talent, and can rely heavily on subjective judgment rather than data.
+
+* **The role of AI:** Reducing manual screening and processing tasks, supporting data-driven HR decisions, and allowing more focus on talent development and workforce strategy.
+
+* **Amazon Quick Solutions:** Tools such as **Chat Agents, Research, QuickSight, Flows**, and **Automate** support data processing, report generation, data visualization, and multi-step workflow automation.
+
+* **HR use cases:** Connecting data → analyzing information → generating reports and visualizations → evaluating candidates → following up on subsequent actions.
+
+* **Recruitment support:** AI can generate interview questions based on hiring objectives, assist with candidate evaluation, and provide recommendations for HR to consider during the decision-making process.
+
+### **5. Speakers 5 (Toan Nguyen, Nghi Danh): Building Secure Private MCP for AWS Quick**
+
+* **Amazon Quick and MCP:** An overview of Amazon Quick and the **Model Context Protocol (MCP)**, including the role of MCP in connecting AI systems with external services.
+
+* **The public endpoint challenge:** The default MCP connector requires a **public endpoint**, which may cause context and logs to travel through the public internet. This increases the **attack surface** and introduces additional security concerns.
+
+* **Private VPC connectivity:** A private MCP architecture can be used to reduce exposure to the public internet.
+
+  * **Private Entry:** Removes the dependency on a public endpoint.
+  * **Private DNS:** The hostname is resolved only within the VPC's internal network.
+  * **Private traffic flow:** Traffic follows the **ENI → ALB → MCP** path, keeping the connection within a private network environment and reducing exposure to the public internet.
