@@ -1,4 +1,4 @@
-=---
+---
 title: "Nhật ký công việc Tuần 12"
 date: 2026-07-06
 weight: 12
