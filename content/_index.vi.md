@@ -19,11 +19,11 @@ chapter: false
 
 &emsp; **Lớp:** AWS042026
 
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viêt Nam
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Việt Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp
 
-&emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 10/07/2026
+&emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 30/07/2026
 
 ![Ảnh đại diện của bạn](/images/a.jpg)
 
