@@ -1,6 +1,6 @@
 ---
 title: "5.3.2 DynamoDB Tables"
-weight: 2
+weight: 3
 ---
 
 # DynamoDB tables for ReviewSentinal
