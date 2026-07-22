@@ -40,7 +40,9 @@ Chính sách thực tập thân thiện và sự hỗ trợ mà công ty dành c
 
 
 ### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập? 
-Không có thêm ý kiến.
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-Có, tôi muốn tiếp tục tham gia chương trình này trong tương lai nếu có cơ hội. Những trải nghiệm trong chương trình đã giúp tôi học hỏi thêm nhiều điều mới và có cơ hội phát triển bản thân trong môi trường thực tế. Vì vậy, tôi rất mong muốn được tiếp tục tham gia và đồng hành cùng chương trình trong thời gian tới.
+
+- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
+  Không có thêm ý kiến.
+
+- Bạn có muốn tiếp tục chương trình này trong tương lai?  
+  Có, tôi muốn tiếp tục tham gia chương trình này trong tương lai nếu có cơ hội. Những trải nghiệm trong chương trình đã giúp tôi học hỏi thêm nhiều điều mới và có cơ hội phát triển bản thân trong môi trường thực tế. Vì vậy, tôi rất mong muốn được tiếp tục tham gia và đồng hành cùng chương trình trong thời gian tới.
