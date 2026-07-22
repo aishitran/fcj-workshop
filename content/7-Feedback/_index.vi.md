@@ -28,11 +28,15 @@ Chính sách thực tập thân thiện và sự hỗ trợ mà công ty dành c
 
 
 ### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?
-Điều tôi hài lòng nhất là môi trường làm việc khá thoải mái, chuyên nghiệp, không bị gò bó. Mentor hướng dẫn kỹ, giải thích rõ khi thắc mắc, nhưng cũng để tôi tự thử trước khi chỉ cách. Nhờ vậy tôi học được không chỉ kiến thức mà cả cách làm việc cho quen với môi trường công ty. 
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  Không có thêm ý kiến nào ngoài những điểm đã đề cập ở trên.
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?
-Có, tôi sẽ giới thiệu chương trình này cho bạn bè vì đây là một cơ hội tốt để vừa học hỏi kiến thức kỹ thuật, vừa được tham gia vào công việc thực tế. Bên cạnh đó, các mentor cũng hỗ trợ rất nhiệt tình trong quá trình học tập và làm việc. Tôi nghĩ chương trình sẽ phù hợp với những bạn sinh viên muốn thử sức và tích lũy thêm kinh nghiệm thực tế.
+
+- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
+  Điều tôi hài lòng nhất là môi trường làm việc khá thoải mái, chuyên nghiệp, không bị gò bó. Mentor hướng dẫn kỹ, giải thích rõ khi thắc mắc, nhưng cũng để tôi tự thử trước khi chỉ cách. Nhờ vậy tôi học được không chỉ kiến thức mà cả cách làm việc cho quen với môi trường công ty.
+
+- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
+  Không có thêm ý kiến nào ngoài những điểm đã đề cập ở trên.
+
+- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+  Có, tôi sẽ giới thiệu chương trình này cho bạn bè vì đây là một cơ hội tốt để vừa học hỏi kiến thức kỹ thuật, vừa được tham gia vào công việc thực tế. Bên cạnh đó, các mentor cũng hỗ trợ rất nhiệt tình trong quá trình học tập và làm việc. Tôi nghĩ chương trình sẽ phù hợp với những bạn sinh viên muốn thử sức và tích lũy thêm kinh nghiệm thực tế.
 
 
 ### Đề xuất & mong muốn
