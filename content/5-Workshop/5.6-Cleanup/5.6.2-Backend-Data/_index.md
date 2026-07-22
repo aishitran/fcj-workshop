@@ -1,5 +1,5 @@
 ---
-title: "5.6.2 Backend and Data Cleanup"
+title: "5.6.2 Backend and data cleanup"
 weight: 2
 ---
 # Backend and data cleanup

@@ -1,31 +1,60 @@
 ---
-title: "Hạ tầng nền"
-date: 2024-01-01
+title: "5.3.3 Messaging và secret"
 weight: 3
-chapter: false
-pre: " <b> 5.3. </b> "
 ---
 
-#### Tổng quan
+# Messaging và secret cho ReviewSentinal
 
-Phần này tạo lớp nền dùng chung cho ReviewSentinal: S3 để upload review thô, DynamoDB để lưu review và sản phẩm, SES để gửi cảnh báo, SQS để giữ sự kiện lỗi, và Secrets Manager cho API key OpenRouter tùy chọn.
+## Tổng quan
 
-#### Nội dung
+Tạo dead-letter queue, cấu hình Amazon SES để gửi thông báo người dùng, và thiết lập secret mà các Lambda sẽ dùng ở các bước sau.
 
-1. [S3 buckets](5.3.1-s3-buckets/)
-2. [DynamoDB tables](5.3.2-dynamodb-tables/)
-3. [Messaging và secret](5.3.3-messaging-secrets/)
+### SQS dead-letter queue
 
-#### Xây dựng hạ tầng nền
+1. Mở SQS và chọn **Create queue**.
+2. Chọn **Standard**.
+3. Đặt tên queue là `lambda-dlq`.
 
-1. Tạo bucket S3 cho file tải lên thô và giữ chặn truy cập công khai.
-2. Tạo ba bảng DynamoDB: `Reviews`, `Products` và `Users`.
-3. Bật DynamoDB Streams và point-in-time recovery cho bảng `Reviews`.
-4. Thiết lập Amazon SES để gửi thông báo người dùng (thay thế SNS cho cảnh báo).
-5. Lưu placeholder API key OpenRouter trong Secrets Manager nếu bạn muốn bật bước phân tích sâu hơn sau này.
+![Guide](/fcj-workshop/images/5-Workshop/sqs-1.PNG)
 
-#### Ghi chú
+4. Xác nhận encryption **SSE-SQS** đang bật.
+5. Đặt message retention là 14 ngày.
+6. Tạo queue.
+7. Copy ARN của queue từ trang chi tiết.
 
-+ Dùng cùng region và cùng kiểu đặt tên ở mọi nơi để Lambda role có thể tham chiếu ARN một cách dễ đoán.
-+ Bucket upload cần cấu hình CORS để browser có thể upload trực tiếp.
-+ Giữ tên tài nguyên khớp đúng với hướng dẫn triển khai, vì các phần sau sẽ đưa chúng vào IAM policy và biến môi trường.
+![Guide](/fcj-workshop/images/5-Workshop/sqs-2.PNG)
+
+### Amazon SES cho thông báo người dùng
+
+1. Truy cập **Amazon SES → Verified identities → Create identity**
+2. Loại kiểu danh tính: **Địa chỉ email**
+3. Email: `noreply@yourdomain.com` (hoặc Gmail của bạn nếu bạn đang trong SES sandbox)
+4. Xác minh địa chỉ email
+5. *(Chỉ dành cho sandbox)* Xác minh chính địa chỉ email nhận của bạn
+
+![Guide](/fcj-workshop/images/5-Workshop/messaging-1.PNG)
+
+### Secrets Manager secret
+
+1. Mở Secrets Manager và chọn **Store a new secret**.
+2. Chọn **Other type of secret**.
+3. Dùng tab **Plaintext**, không dùng key/value pairs.
+4. Nhập giá trị placeholder như `REPLACE_ME_LATER`.
+5. Giữ encryption bằng key AWS-managed mặc định.
+
+![Guide](/fcj-workshop/images/5-Workshop/messaging-2.PNG)
+
+6. Đặt tên secret `review-sentiment-analyzer-openrouter-api-key`.
+7. Bỏ rotation và lưu lại.
+8. Copy ARN của secret.
+
+![Guide](/fcj-workshop/images/5-Workshop/messaging-3.PNG)
+
+### Kết quả mong đợi
+
+Bạn nên có:
+- ARN của SQS DLQ
+- Địa chỉ email SES đã xác minh làm người gửi
+- ARN của Secrets Manager secret
+
+Các ARN và chi tiết cấu hình này sẽ được sử dụng trong chính sách IAM và biến môi trường Lambda trong các phần sau.

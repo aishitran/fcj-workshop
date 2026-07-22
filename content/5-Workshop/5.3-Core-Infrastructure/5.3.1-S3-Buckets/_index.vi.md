@@ -1,5 +1,5 @@
 ---
-title: "5.3.1 S3 Buckets"
+title: "5.3.1 S3 buckets"
 weight: 1
 ---
 

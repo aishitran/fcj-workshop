@@ -1,5 +1,5 @@
 ---
-title: "5.5.3 Kiểm tra Front-end"
+title: "5.5.3 Kiểm tra Frontend"
 weight: 3
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "5.6.1 Dọn dẹp Front-end"
+title: "5.6.1 Dọn dẹp frontend"
 weight: 1
 ---
 

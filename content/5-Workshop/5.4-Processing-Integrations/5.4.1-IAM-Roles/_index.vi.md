@@ -1,46 +1,46 @@
 ---
-title: "5.4.1 IAM roles"
+title: "5.4.1 IAM role"
 weight: 1
 ---
 
-# IAM roles for the processing layer
+# IAM role cho lớp xử lý
 
-## Overview
+## Tổng quan
 
-Create one least-privilege IAM role for each Lambda function used by ReviewSentinal. Do not reuse a shared role: the processor, analyzer, and API handler each touch a different set of resources.
+Tạo một IAM role tối thiểu quyền cho từng Lambda function của ReviewSentinal. Không nên dùng chung một role: processor, analyzer và API handler truy cập các nhóm tài nguyên khác nhau.
 
-### Roles to create
+### Các role cần tạo
 
 - `review-processor-role`
 - `sentiment-analyzer-role`
 - `api-handler-role`
 
-### Common requirements
+### Yêu cầu chung
 
 - Trust policy: `lambda.amazonaws.com`
-- CloudWatch Logs permissions for all three roles
-- SQS send permissions for the DLQ
-- Scoped S3, DynamoDB, and Secrets Manager access based on the Lambda function
-- **SES send email permission for the sentiment analyzer role**
+- Quyền CloudWatch Logs cho cả ba role
+- Quyền gửi SQS cho DLQ
+- Quyền S3, DynamoDB và Secrets Manager được giới hạn theo từng Lambda function
+- **Quyền gửi email qua SES cho role sentiment-analyzer**
 
-## Step-by-step
+## Từng bước
 
-### 1. Create the processor role
+### 1. Tạo role cho processor
 
-1. Open the IAM console and go to **Roles**.
-2. Choose **Create role**.
-3. Select **AWS service** as the trusted entity.
-4. Choose **Lambda** as the use case.
+1. Mở IAM console và vào **Roles**.
+2. Chọn **Create role**.
+3. Chọn **AWS service** làm trusted entity.
+4. Chọn use case **Lambda**.
 
 ![Guide](/fcj-workshop/images/5-Workshop/iam-1.PNG)
 
-5. Continue without attaching any AWS managed policy.
-6. Name the role `review-processor-role` and create it.
-7. Open the role and create an inline policy in the **JSON** editor.
+5. Não attach managed policy nào ở bước này.
+6. Đặt tên role là `review-processor-role` rồi tạo role.
+7. Mở role và tạo inline policy trong tab **JSON**.
 
 ![Guide](/fcj-workshop/images/5-Workshop/iam-2.PNG)
 
-8. Paste the following policy and replace `<ACCOUNT_ID>` with your real account ID:
+8. Dán policy của processor sau đây và thay `<ACCOUNT_ID>` bằng account ID thật:
 ```json
 {
   "Version": "2012-10-17",
@@ -79,18 +79,19 @@ Create one least-privilege IAM role for each Lambda function used by ReviewSenti
       "Resource": "arn:aws:logs:ap-southeast-1:<ACCOUNT_ID>:*"
     }
   ]
+}
 ```
 
 ![Guide](/fcj-workshop/images/5-Workshop/iam-3.PNG)
 
-9. Save the policy as `review-processor-policy`.
+9. Lưu policy với tên `review-processor-policy`.
 
-### 2. Create the sentiment analyzer role
+### 2. Tạo role cho sentiment analyzer
 
-1. Repeat the same create-role flow.
-2. Name the role `sentiment-analyzer-role`.
-3. Create a second inline policy named `sentiment-analyzer-policy`.
-4. Paste the following policy and replace `<ACCOUNT_ID>` and the Secrets Manager ARN with your real values:
+1. Lặp lại flow tạo role.
+2. Đặt tên role là `sentiment-analyzer-role`.
+3. Tạo inline policy thứ hai tên `sentiment-analyzer-policy`.
+4. Dán policy của analyzer sau đây và thay `<ACCOUNT_ID>` và ARN của Secrets Manager bằng giá trị thật:
 ```json
 {
   "Version": "2012-10-17",
@@ -138,8 +139,6 @@ Create one least-privilege IAM role for each Lambda function used by ReviewSenti
       "Sid": "DLQAccess",
       "Effect": "Allow",
       "Action": ["sqs:SendMessage"],
-      "Effect": "Allow",
-      "Action": ["sqs:SendMessage"],
       "Resource": "arn:aws:sqs:ap-southeast-1:<ACCOUNT_ID>:lambda-dlq"
     },
     {
@@ -151,17 +150,15 @@ Create one least-privilege IAM role for each Lambda function used by ReviewSenti
   ]
 }
 ```
-5. Save the policy as `sentiment-analyzer-policy`.
-6. Verify the `<ACCOUNT_ID>` and Secrets Manager ARN are correctly replaced in the policy.
-7. Confirm the separate `DynamoDBStreamsAccess` statement is present.
-8. **Add SES permissions**: Allow `ses:SendEmail` and `ses:SendRawEmail` for the verified sender email address (or use a resource wildcard if verifying multiple addresses).
+5. Đảm bảo statement `DynamoDBStreamsAccess` vẫn có mặt.
+6. **Thêm quyền SES**: Cho phép `ses:SendEmail` và `ses:SendRawEmail` cho địa chỉ email đã xác minh (hoặc dùng resource wildcard nếu xác minh nhiều địa chỉ).
 
-### 3. Create the API handler role
+### 3. Tạo role cho API handler
 
-1. Create a third IAM role for Lambda.
-2. Name it `api-handler-role`.
-3. Attach the `api-handler-policy` inline policy.
-4. Paste the following policy and replace `<ACCOUNT_ID>` and the secret ARN with your real values:
+1. Tạo role Lambda thứ ba.
+2. Đặt tên là `api-handler-role`.
+3. Gắn inline policy `api-handler-policy`.
+4. Dán policy của API handler sau đây và thay `<ACCOUNT_ID>` và secret ARN bằng giá trị thật:
 ```json
 {
   "Version": "2012-10-17",
@@ -200,7 +197,7 @@ Create one least-privilege IAM role for each Lambda function used by ReviewSenti
       "Sid": "DLQAccess",
       "Effect": "Allow",
       "Action": ["sqs:SendMessage"],
-      "Resource": "arn:aws:sqs:ap-southeast-1:<ACCOUNT_ID>:lambda-dlq
+      "Resource": "arn:aws:sqs:ap-southeast-1:<ACCOUNT_ID>:lambda-dlq"
     },
     {
       "Sid": "CloudWatchLogs",
@@ -211,19 +208,18 @@ Create one least-privilege IAM role for each Lambda function used by ReviewSenti
   ]
 }
 ```
-5. Save the policy as `api-handler-policy`.
-6. Replace `<ACCOUNT_ID>` and the secret ARN with your real values in the policy.
+5. Thay `<ACCOUNT_ID>` và secret ARN bằng giá trị thật trong policy.
 
 ![Guide](/fcj-workshop/images/5-Workshop/iam-4.PNG)
 
-### Notes
+### Ghi chú
 
-1. The processor role needs S3 read access and DynamoDB write access.
-2. The analyzer role needs stream access in addition to table access, and SES permissions to send completion emails.
-3. The API handler role needs the broadest table permissions because it serves the REST API and scheduled digest path.
-4. Keep CloudWatch Logs permissions in every role so each function can write logs on first invocation.
-5. **No SNS permissions are required anymore** as the analyzer function uses Amazon SES for user notifications.
+1. Processor cần quyền đọc S3 và ghi DynamoDB.
+2. Analyzer cần quyền stream ngoài quyền truy cập bảng, và quyền SES để gửi email thông báo hoàn thành.
+3. API handler cần quyền bảng rộng hơn vì phục vụ REST API và daily digest.
+4. Giữ CloudWatch Logs permissions trong cả ba role để function ghi log ngay từ lần chạy đầu.
+5. **Không cần quyền SNS nữa** vì analyzer function sử dụng Amazon SES để thông báo người dùng.
 
-### Expected result
+### Kết quả mong đợi
 
-You should end this step with three IAM roles that are ready to attach to the Lambda functions in the next subpage. The sentiment-analyzer-role will have permissions to send emails via Amazon SES.
+Kết thúc bước này, bạn sẽ có ba IAM role sẵn sàng để gắn vào các Lambda function ở subpage tiếp theo. Role `sentiment-analyzer-role` sẽ có quyền gửi email qua Amazon SES.

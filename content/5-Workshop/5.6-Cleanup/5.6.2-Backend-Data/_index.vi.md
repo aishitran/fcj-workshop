@@ -1,5 +1,5 @@
 ---
-title: "5.6.2 Dọn dẹp Backend và Dữ liệu"
+title: "5.6.2 Dọn dẹp backend và dữ liệu"
 weight: 2
 ---
 # Dọn dẹp backend và dữ liệu

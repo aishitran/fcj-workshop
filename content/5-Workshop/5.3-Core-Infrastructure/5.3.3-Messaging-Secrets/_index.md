@@ -1,31 +1,63 @@
 ---
-title: "Core Infrastructure"
-date: 2024-01-01
+title: "5.3.3 Messaging and secrets"
 weight: 3
-chapter: false
-pre: " <b> 5.3. </b> "
 ---
 
-#### Overview
+# Messaging and secrets for ReviewSentinal
 
-This section creates the shared data and messaging foundation for ReviewSentinal: S3 for raw review uploads, DynamoDB for the review catalog, SES for alerts, SQS for dead-letter handling, and Secrets Manager for the optional OpenRouter key.
+## Overview
 
-#### Content
+Create the dead-letter queue, configure Amazon SES for user notifications, and set up the secret that the Lambdas will use later.
 
-1. [S3 buckets](5.3.1-s3-buckets/)
-2. [DynamoDB tables](5.3.2-dynamodb-tables/)
-3. [Messaging and secrets](5.3.3-messaging-secrets/)
+### SQS dead-letter queue
 
-#### Build the foundation
+1. Open SQS and choose **Create queue**.
+2. Select **Standard**.
+3. Name the queue `lambda-dlq`.
 
-1. Create the raw upload bucket in S3 and keep public access blocked.
-2. Create the DynamoDB tables `Reviews`, `Products`, and `Users`.
-3. Enable DynamoDB Streams and point-in-time recovery on `Reviews`.
-4. Set up Amazon SES for user notifications (replaces SNS for alerts).
-5. Store the OpenRouter API key placeholder in Secrets Manager if you want the optional deeper analysis pass later.
+![Guide](/fcj-workshop/images/5-Workshop/sqs-1.PNG)
 
-#### Notes
+4. Confirm **SSE-SQS** encryption is on.
+5. Set message retention to 14 days.
+6. Create the queue.
 
-+ Use the same region and naming pattern everywhere so the Lambda roles can reference the resources with predictable ARNs.
-+ The upload bucket needs CORS configured for browser-based direct uploads.
-+ Use consistent resource names throughout the workshop so they can be referenced in IAM policies and environment variables.
+![Guide](/fcj-workshop/images/5-Workshop/sqs-2.PNG)
+
+7. Copy the queue ARN from the details page.
+
+
+
+### Amazon SES for user notifications
+
+1. Go to **Amazon SES → Verified identities → Create identity**
+2. Identity type: **Email address**
+3. Email: `noreply@yourdomain.com` (or your Gmail if you're in the SES sandbox)
+4. Verify the email address
+5. *(Sandbox only)* Also verify your own receiving email address
+
+![Guide](/fcj-workshop/images/5-Workshop/messaging-1.PNG)
+
+### Secrets Manager secret
+
+1. Open Secrets Manager and choose **Store a new secret**.
+2. Pick **Other type of secret**.
+3. Use the **Plaintext** tab, not key/value pairs.
+4. Enter a placeholder value such as `REPLACE_ME_LATER`.
+5. Leave encryption on the default AWS-managed key.
+
+![Guide](/fcj-workshop/images/5-Workshop/messaging-2.PNG)
+
+6. Name the secret `review-sentiment-analyzer-openrouter-api-key`.
+7. Skip rotation and store it.
+8. Copy the secret ARN.
+
+![Guide](/fcj-workshop/images/5-Workshop/messaging-3.PNG)
+
+### Expected result
+
+You should have:
+- An SQS DLQ ARN
+- A verified SES sender email address
+- A Secrets Manager secret ARN
+
+These ARNs and configuration details will be used in IAM policies and Lambda environment variables in subsequent sections.

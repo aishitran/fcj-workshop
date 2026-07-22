@@ -1,5 +1,5 @@
 ---
-title: "5.6.1 Front-end cleanup"
+title: "5.6.1 Frontend cleanup"
 weight: 1
 ---
 
