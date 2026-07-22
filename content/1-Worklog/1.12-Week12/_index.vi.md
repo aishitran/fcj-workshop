@@ -1,58 +1,56 @@
----
-title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+=---
+title: "Nhật ký Tuần 12"
+date: 2026-07-06
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-### Mục tiêu tuần 12:
+### Mục tiêu Tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hỗ trợ team hoàn thiện phần hạ tầng còn thiếu cho dự án ReviewSentinel.
+* Hỗ trợ triển khai và kiểm tra các hàm Lambda cùng trigger tương ứng.
+* Tham gia rà soát, phát hiện các lỗi cấu hình phát sinh trong pipeline.
+* Theo dõi việc dựng API Gateway và chuyển đổi sang luồng xác thực thật.
+* Tham gia kiểm thử hệ thống bằng dữ liệu mẫu và hỗ trợ chuẩn bị tài liệu dự án.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc thực hiện trong tuần:
 
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 2 | **Hoàn thiện hạ tầng còn thiếu** <br> - Hỗ trợ team dựng nốt các thành phần hạ tầng còn lại của ReviewSentinel | 07/07/2026 | 07/07/2026 | AWS Study Group |
+| 3 | **Triển khai Lambda function** <br> - Hỗ trợ triển khai và kiểm tra 3 Lambda function chính <br> - Kiểm tra trigger tương ứng (S3, DynamoDB Stream, EventBridge) | 08/07/2026 | 08/07/2026 | AWS Study Group |
+| 4 | **Rà soát lỗi cấu hình** <br> - Tham gia rà soát pipeline, phát hiện một số lỗi cấu hình phát sinh | 09/07/2026 | 09/07/2026 | AWS Study Group |
+| 5 | **API Gateway & xác thực** <br> - Theo dõi việc dựng API Gateway với Cognito authorizer <br> - Quan sát/hỗ trợ chuyển đổi sang luồng đăng nhập thật qua Cognito Hosted UI | 10/07/2026 | 10/07/2026 | AWS Study Group |
+| 6 | **Kiểm thử & tài liệu** <br> - Tham gia kiểm thử hệ thống bằng dữ liệu mẫu <br> - Hỗ trợ chuẩn bị tài liệu dự án | 11/07/2026 | 11/07/2026 | AWS Study Group |
 
-### Kết quả đạt được tuần 12:
+# Kết quả đạt được trong Tuần 12
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Hoàn thiện hạ tầng
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hỗ trợ team dựng nốt các thành phần hạ tầng còn thiếu cho ReviewSentinel.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+## Triển khai Lambda
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Hỗ trợ triển khai và kiểm tra 3 Lambda function chính cùng các trigger tương ứng (S3, DynamoDB Stream, EventBridge).
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+## Rà soát lỗi cấu hình
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Tham gia rà soát pipeline và phát hiện một số lỗi cấu hình phát sinh trong quá trình chạy thử.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+## API Gateway & Xác thực
 
+- Theo dõi quá trình dựng API Gateway với Cognito authorizer.
+- Quan sát và hỗ trợ quá trình chuyển đổi sang luồng đăng nhập thật qua Cognito Hosted UI.
 
+## Kiểm thử & Tài liệu
+
+- Tham gia kiểm thử hệ thống bằng dữ liệu mẫu.
+- Hỗ trợ chuẩn bị tài liệu dự án.
+
+### Tóm tắt lý thuyết
+
+- **AWS Lambda Trigger** cho phép hàm Lambda tự động được gọi khi có sự kiện từ S3, DynamoDB Stream hoặc EventBridge.
+- **Amazon API Gateway** kết hợp với **Cognito Authorizer** giúp xác thực request trước khi vào đến backend.
+- **Cognito Hosted UI** cung cấp giao diện đăng nhập/đăng ký có sẵn, tích hợp trực tiếp với luồng OAuth 2.0.
+- Việc rà soát lỗi cấu hình (filter sai điều kiện, thiếu quyền IAM, alarm thiếu dimension...) là bước quan trọng để đảm bảo pipeline hoạt động đúng như thiết kế.

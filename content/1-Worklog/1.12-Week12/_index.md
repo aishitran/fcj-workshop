@@ -1,57 +1,56 @@
 ---
 title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-07-06
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Support the team in completing the remaining infrastructure for the ReviewSentinel project.
+* Support deploying and verifying the Lambda functions along with their triggers.
+* Take part in reviewing and identifying configuration issues in the pipeline.
+* Follow the API Gateway setup and the switch to the real authentication flow.
+* Take part in system testing with sample data and help prepare project documentation.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | **Complete the Remaining Infrastructure** <br> - Support the team in finishing the remaining ReviewSentinel infrastructure components | 07/07/2026 | 07/07/2026 | AWS Study Group |
+| 3 | **Deploy Lambda Functions** <br> - Support deploying and verifying the 3 core Lambda functions <br> - Verify the corresponding triggers (S3, DynamoDB Stream, EventBridge) | 07/08/2026 | 07/08/2026 | AWS Study Group |
+| 4 | **Review Configuration Issues** <br> - Take part in reviewing the pipeline and identifying configuration issues that came up | 07/09/2026 | 07/09/2026 | AWS Study Group |
+| 5 | **API Gateway & Authentication** <br> - Follow the process of building the API Gateway with a Cognito authorizer <br> - Observe and support the switch to a real login flow via Cognito Hosted UI | 07/10/2026 | 07/10/2026 | AWS Study Group |
+| 6 | **Testing & Documentation** <br> - Take part in testing the system with sample data <br> - Help prepare the project documentation | 07/11/2026 | 07/11/2026 | AWS Study Group |
 
-### Week 12 Achievements:
+# Week 12 Achievements
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Infrastructure Completion
 
-* Successfully created and configured an AWS Free Tier account.
+- Supported the team in finishing the remaining infrastructure components for ReviewSentinel.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+## Lambda Deployment
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Supported deploying and verifying the 3 core Lambda functions along with their corresponding triggers (S3, DynamoDB Stream, EventBridge).
 
-* Used AWS CLI to perform basic operations such as:
+## Configuration Review
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+- Took part in reviewing the pipeline and identifying several configuration issues that came up during testing.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+## API Gateway & Authentication
+
+- Followed the process of building the API Gateway with a Cognito authorizer.
+- Observed and supported the transition to a real login flow via Cognito Hosted UI.
+
+## Testing & Documentation
+
+- Took part in testing the system with sample data.
+- Helped prepare the project documentation.
+
+### Theory Summary
+
+- **AWS Lambda Triggers** allow a Lambda function to be automatically invoked in response to events from S3, DynamoDB Streams, or EventBridge.
+- **Amazon API Gateway** combined with a **Cognito Authorizer** validates requests before they reach the backend.
+- **Cognito Hosted UI** provides a ready-made sign-in/sign-up interface, integrating directly with the OAuth 2.0 flow.
+- Reviewing configuration issues (incorrect filter conditions, missing IAM permissions, alarms missing a dimension, etc.) is an important step to ensure the pipeline behaves as designed.

@@ -1,6 +1,6 @@
 ---
-title: "Nhật ký công việc Tuần 11"
-date: 29-06-2026
+title: "Nhật ký Tuần 11"
+date: 2026-06-29
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
@@ -8,59 +8,52 @@ pre: " <b> 1.11. </b> "
 
 ### Mục tiêu Tuần 11:
 
-* Chuẩn bị các tài nguyên AWS cần thiết cho dự án ReviewSentinel dựa trên kiến trúc đã được thống nhất.
-* Cấu hình các thành phần xác thực và phân quyền bằng Amazon Cognito và IAM.
-* Chuẩn bị các bảng DynamoDB và bucket Amazon S3 phục vụ lưu trữ dữ liệu của ứng dụng.
-* Chuẩn bị nền tảng cho việc tích hợp các hàm AWS Lambda.
-* Tổ chức cấu trúc dự án Terraform để triển khai hạ tầng.
-* Kiểm tra cấu hình hạ tầng trước khi bước sang giai đoạn triển khai ở Tuần 12.
+* Chốt kiến trúc tổng thể cho dự án ReviewSentinel.
+* Xác định mô hình bảo mật cho hệ thống (xác thực, phân quyền).
+* Thiết kế lược đồ dữ liệu DynamoDB cho ứng dụng.
+* Soạn đặc tả các Lambda function chính sẽ triển khai.
+* Tìm hiểu thêm một số dịch vụ AWS phục vụ vận hành và bảo mật.
 
 ### Các công việc thực hiện trong tuần:
 
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 2 | **Chuẩn bị hạ tầng AWS** <br> - Rà soát kiến trúc ReviewSentinel đã được thống nhất <br> - Kiểm tra mối liên kết giữa API Gateway, Lambda, DynamoDB và Amazon S3 <br> - Chuẩn bị các tài nguyên AWS phục vụ cho việc triển khai | 29/06/2026 | 29/06/2026 | AWS Study Group |
-| 3 | **Cấu hình xác thực và phân quyền** <br> - Cấu hình Amazon Cognito User Pool <br> - Chuẩn bị IAM Roles và IAM Policies theo nguyên tắc Least Privilege <br> - Kiểm tra luồng xác thực JWT | 30/06/2026 | 30/06/2026 | AWS Study Group |
-| 4 | **Chuẩn bị tài nguyên lưu trữ dữ liệu** <br> - Tạo cấu trúc các bảng DynamoDB <br> - Chuẩn bị Amazon S3 Bucket để lưu trữ dữ liệu đánh giá <br> - Kiểm tra cấu hình Event Notification | 01/07/2026 | 01/07/2026 | AWS Study Group |
-| 5 | **Chuẩn bị triển khai Lambda** <br> - Hoàn thiện cấu trúc các hàm Lambda <br> - Cấu hình Environment Variables <br> - Chuẩn bị CloudWatch Logging và cơ chế xử lý lỗi | 02/07/2026 | 02/07/2026 | AWS Study Group |
-| 6 | **Hoàn thiện cấu trúc Terraform** <br> - Cập nhật Providers và Modules <br> - Chuẩn bị các tài nguyên hạ tầng cơ bản <br> - Kiểm tra quy trình triển khai hạ tầng | 03/07/2026 | 03/07/2026 | AWS Study Group |
+| 2 | **Chốt kiến trúc tổng thể** <br> - Cùng team thống nhất kiến trúc ReviewSentinel: lớp edge, ứng dụng, xử lý, phân tích AI, giám sát | 30/06/2026 | 30/06/2026 | AWS Study Group |
+| 3 | **Xác định mô hình bảo mật** <br> - Xác định luồng xác thực Cognito <br> - Xác định phân quyền IAM theo nguyên tắc tối thiểu <br> - Xác định phân quyền ở tầng API Gateway | 01/07/2026 | 01/07/2026 | AWS Study Group |
+| 4 | **Thiết kế lược đồ DynamoDB** <br> - Thiết kế bảng Reviews, Products, Users <br> - Xác định các mẫu truy vấn sẽ sử dụng | 02/07/2026 | 02/07/2026 | AWS Study Group |
+| 5 | **Soạn đặc tả Lambda function** <br> - Mô tả chi tiết các function: review-processor, sentiment-analyzer, API handler <br> - Xác định trigger tương ứng cho từng function | 03/07/2026 | 03/07/2026 | AWS Study Group |
+| 6 | **Tìm hiểu thêm dịch vụ hỗ trợ** <br> - Tìm hiểu EBS Data Lifecycle Manager <br> - Tìm hiểu AWS SSO <br> - Tìm hiểu IAM Permission Boundaries <br> - Tìm hiểu AWS Security Hub | 04/07/2026 | 04/07/2026 | AWS Study Group |
 
 # Kết quả đạt được trong Tuần 11
 
-## Chuẩn bị hạ tầng AWS
+## Kiến trúc tổng thể
 
-- Đã rà soát kiến trúc ReviewSentinel và kiểm tra mối liên kết giữa API Gateway, AWS Lambda, Amazon DynamoDB, Amazon S3, Amazon Comprehend và Amazon Bedrock.
-- Chuẩn bị các tài nguyên AWS cần thiết để phục vụ quá trình triển khai hệ thống.
-- Xác nhận việc bố trí các thành phần hạ tầng phù hợp với luồng hoạt động của ứng dụng.
+- Cùng team chốt kiến trúc tổng thể của ReviewSentinel, gồm 5 lớp: edge, ứng dụng, xử lý, phân tích AI và giám sát.
 
-## Cấu hình xác thực và phân quyền
+## Mô hình bảo mật
 
-- Hoàn thành cấu hình **Amazon Cognito User Pool** phục vụ xác thực người dùng.
-- Chuẩn bị **IAM Roles** và **IAM Policies** theo nguyên tắc **Least Privilege** cho các hàm Lambda.
-- Kiểm tra luồng xác thực bằng **JWT Token** giữa Amazon Cognito và API Gateway.
+- Xác định luồng xác thực người dùng qua Amazon Cognito.
+- Xác định cách phân quyền IAM theo nguyên tắc tối thiểu (least privilege).
+- Xác định cách phân quyền ở tầng API Gateway.
 
-## Chuẩn bị tài nguyên lưu trữ
+## Lược đồ dữ liệu DynamoDB
 
-- Chuẩn bị các bảng **Amazon DynamoDB** phục vụ lưu trữ dữ liệu **Reviews**, **Products** và **Users**.
-- Cấu hình **Amazon S3 Bucket** để lưu trữ dữ liệu đánh giá được tải lên.
-- Kiểm tra cấu hình **Event Notification** giữa Amazon S3 và AWS Lambda nhằm phục vụ xử lý tự động.
+- Thiết kế các bảng chính: Reviews, Products, Users.
+- Xác định các mẫu truy vấn (query pattern) sẽ dùng cho từng bảng.
 
-## Chuẩn bị triển khai Lambda
+## Đặc tả Lambda function
 
-- Hoàn thiện cấu trúc các hàm AWS Lambda theo chức năng được phân công.
-- Chuẩn bị các biến môi trường (Environment Variables) và các thiết lập thực thi.
-- Cấu hình **Amazon CloudWatch Logs** để hỗ trợ giám sát và xử lý lỗi trong quá trình phát triển.
+- Soạn đặc tả cho 3 Lambda function chính: review-processor, sentiment-analyzer, API handler.
+- Xác định trigger tương ứng cho từng function.
 
-## Chuẩn bị hạ tầng với Terraform
+## Tìm hiểu thêm
 
-- Hoàn thiện cấu trúc dự án Terraform gồm **Providers**, **Variables** và **Modules**.
-- Chuẩn bị các tệp cấu hình **Infrastructure as Code (IaC)** để triển khai tài nguyên AWS.
-- Kiểm tra quy trình triển khai nhằm đảm bảo hạ tầng sẵn sàng cho giai đoạn phát triển tiếp theo.
+- Tìm hiểu EBS Data Lifecycle Manager, AWS SSO, IAM Permission Boundaries và AWS Security Hub.
 
 ### Tóm tắt lý thuyết
 
-- **Amazon Cognito** là dịch vụ quản lý người dùng và xác thực, sử dụng **User Pool** và **JWT Token** để bảo vệ ứng dụng.
-- **AWS Lambda** là dịch vụ điện toán không máy chủ (Serverless), cho phép thực thi mã nguồn khi có sự kiện từ các dịch vụ AWS.
-- **Amazon DynamoDB** là cơ sở dữ liệu NoSQL được quản lý hoàn toàn, có khả năng mở rộng cao và hiệu năng ổn định.
-- **Amazon S3** là dịch vụ lưu trữ đối tượng có độ bền cao và có thể kích hoạt các quy trình xử lý thông qua **Event Notification**.
-- **Terraform** là công cụ **Infrastructure as Code (IaC)** giúp tự động hóa việc triển khai và quản lý hạ tầng AWS bằng các tệp cấu hình có thể tái sử dụng.
+- **Amazon Cognito** cung cấp cơ chế xác thực và quản lý người dùng an toàn thông qua User Pool và JWT token.
+- **IAM Least Privilege** là nguyên tắc chỉ cấp đúng quyền cần thiết cho từng vai trò, hạn chế rủi ro bảo mật.
+- **Amazon DynamoDB** là cơ sở dữ liệu NoSQL được quản lý hoàn toàn, thiết kế lược đồ tốt giúp tối ưu hiệu năng truy vấn.
+- **AWS Lambda** thực thi mã theo sự kiện, phù hợp với kiến trúc serverless khi được kích hoạt qua các trigger như S3, DynamoDB Stream, EventBridge.
+- **AWS Security Hub** tổng hợp và đánh giá tình trạng bảo mật trên toàn tài khoản AWS theo các chuẩn như CIS, PCI DSS.
