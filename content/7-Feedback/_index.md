@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 > Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
 
 ### Overall Evaluation
@@ -36,12 +32,18 @@ The company provides an internship allowance and offers flexible working hours w
 
 ### Additional Questions
 - What did you find **most satisfying** during your internship?  
+  What I found most satisfying was the comfortable and professional working environment. I did not feel overly restricted while working. The mentors provided detailed guidance and explained things clearly whenever I had questions, while also encouraging me to try solving problems on my own before showing me the solution. This helped me learn not only technical knowledge but also how to work and gradually adapt to a professional company environment.
 - What do you think the company **should improve** for future interns?  
+  I do not have any additional suggestions beyond the points mentioned above.
 - If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+  Yes, I would recommend this program to my friends because it provides a good opportunity to learn technical knowledge while also gaining practical work experience. In addition, the mentors are very supportive throughout the learning and working process. I believe this program would be suitable for students who want to challenge themselves and gain more hands-on experience.
 
 ---
 
 ### Suggestions & Expectations
 - Do you have any suggestions to improve the internship experience?  
+  I do not have any additional suggestions at this time.
 - Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+  Yes, I would like to continue participating in this program in the future if I have the opportunity. The experience has allowed me to learn many new things and develop myself through practical experience in a professional environment. Therefore, I would be happy to continue participating in and contributing to similar activities in the future.
+- Any other comments (free sharing):  
+  I do not have any additional comments.

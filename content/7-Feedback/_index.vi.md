@@ -5,9 +5,6 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 >Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
 
@@ -33,12 +30,15 @@ Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về t
 
 
 ### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+- Điều bạn **hài lòng nhất** trong thời gian thực tập?
+Điều tôi hài lòng nhất là môi trường làm việc khá thoải mái, chuyên nghiệp, không bị gò bó. Mentor hướng dẫn kỹ, giải thích rõ khi thắc mắc, nhưng cũng để tôi tự thử trước khi chỉ cách. Nhờ vậy tôi học được không chỉ kiến thức mà cả cách làm việc cho quen với môi trường công ty. 
+- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  Không có thêm ý kiến nào ngoài những điểm đã đề cập ở trên.
+- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?
+Có, tôi sẽ giới thiệu chương trình này cho bạn bè vì đây là một cơ hội tốt để vừa học hỏi kiến thức kỹ thuật, vừa được tham gia vào công việc thực tế. Bên cạnh đó, các mentor cũng hỗ trợ rất nhiệt tình trong quá trình học tập và làm việc. Tôi nghĩ chương trình sẽ phù hợp với những bạn sinh viên muốn thử sức và tích lũy thêm kinh nghiệm thực tế.
 
 
 ### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
+- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập? 
+Không có thêm ý kiến.
 - Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+Có, tôi muốn tiếp tục tham gia chương trình này trong tương lai nếu có cơ hội. Những trải nghiệm trong chương trình đã giúp tôi học hỏi thêm nhiều điều mới và có cơ hội phát triển bản thân trong môi trường thực tế. Vì vậy, tôi rất mong muốn được tiếp tục tham gia và đồng hành cùng chương trình trong thời gian tới.
