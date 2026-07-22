@@ -30,7 +30,7 @@ Trong thoờ gian
 ---
 
 ### [Event 3](4.2-Event3/)
-&emsp;**Tên sự kiện:** FCAJ Community Day - 23/05/2026
+&emsp;**Tên sự kiện:** FCAJ Community Day - 27/06/2026
 
 &emsp;**Thời gian:** 09:00 ngày 27-06-2026
 

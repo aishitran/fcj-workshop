@@ -28,3 +28,14 @@ During my internship, I participated in three events. Each one was a memorable e
 &emsp;**Role:** Attendee  
 
 ---
+
+### [Event 2](4.2-Event2/)  
+&emsp;**Event Name:** FCAJ Community Day - 2026/06/27 
+
+&emsp;**Date & Time:** 09:00, June 27, 2026
+
+&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+
+&emsp;**Role:** Attendee(Online)  
+
+---
