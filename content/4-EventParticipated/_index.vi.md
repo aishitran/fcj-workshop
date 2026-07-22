@@ -28,3 +28,14 @@ Trong thoờ gian
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
 
 ---
+
+### [Event 3](4.2-Event3/)
+&emsp;**Tên sự kiện:** FCAJ Community Day - 23/05/2026
+
+&emsp;**Thời gian:** 09:00 ngày 27-06-2026
+
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, Thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự (Online)
+
+---

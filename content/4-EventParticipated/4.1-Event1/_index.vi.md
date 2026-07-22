@@ -1,37 +1,42 @@
 ---
-title: "Event 1: FCAJ Community Day - 2026/05/09"
-date: 2026-05-09
+title: "Sự kiện 1: FCAJ Community Day - 2026/05/09"
+date: 09-05-2026
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
-### **1. Diễn giả 1 (Huynh Hoang Long): Addicted to Learning Like You're Addicted to Social Media**
-*   **Nguyên nhân của sự trì hoãn:** Diễn giả giải thích rằng bộ não thường chọn mạng xã hội thay vì học tập vì nó mang lại **phần thưởng nhanh**, kích thích sự **tò mò** và đòi hỏi **động lực thấp**. Ngược lại, việc học thường cho kết quả chậm và yêu cầu sự tập trung lâu dài, khiến não bộ dễ nản lòng.
-*   **Cơ chế Dopamine:** Dopamine không chỉ tiết ra khi nhận phần thưởng mà quan trọng nhất là khi bộ não **kỳ vọng** phần thưởng sắp đến.
-*   **Các kỹ thuật "Hack" não bộ:**
-    *   **Canh bạc Dopamine:** Tự tạo ra các mẩu giấy ghi phần thưởng nhỏ và bốc thăm sau mỗi 10-15 phút học để kích thích sự tò mò của não.
-    *   **Tận dụng nỗi sợ mất mát:** Sử dụng phương pháp "lập chuỗi" (streak) giống như điểm danh trong game hay TikTok. Việc nhìn thấy một chuỗi ngày học tập liên tục trên lịch sẽ khiến bạn sợ làm đứt chuỗi và có động lực học tiếp.
-    *   **Đánh lừa hạch hạnh nhân:** Chia nhỏ kiến thức khổng lồ thành những tác vụ cực nhỏ (quy tắc 2 phút) để não không cảm thấy bị ngợp.
-    *   **Gamification (Trò chơi hóa):** Biến việc học thành việc cày cấp, tích lũy XP và tự thưởng cho mình khi đạt cột mốc nhất định.
+![Proof](/fcj-workshop/images/4-EventParticipated/09052026.jpg)
+### **1. Diễn giả 1 (Huynh Hoang Long): Xây dựng thói quen học tập hấp dẫn như mạng xã hội**
 
-### **2. Diễn giả 2 (Nguyen Tuan Thinh): Automated Prompt Engineering: Enhancing LLM Output Quality**
-*   **Kỹ thuật Prompt Engineering:** Nhấn mạnh rằng AI sẽ cho kết quả tồi nếu chỉ sử dụng các câu lệnh chung chung. Một câu lệnh tốt cần có 7 thành phần: Vai trò (Role), Chỉ dẫn (Instruction), Ngữ cảnh (Context), Dữ liệu đầu vào (Input), Định dạng đầu ra (Output format), Ví dụ (Example) và Ràng buộc (Constraint).
-*   **Kỹ thuật AI nâng cao:** Giới thiệu các phương pháp như **Chain of Thought** (suy nghĩ từng bước) và **Tree of Thought** (sử dụng cấu trúc cây để tìm kết quả tốt nhất).
-*   **Dự án Optimizer:** Đây là một công cụ giúp tối ưu hóa câu lệnh cho AI, sử dụng kiến trúc **Serverless** trên AWS.
-*   **Công nghệ sử dụng:** S3 và CloudFront cho Front-end; API Gateway và Lambda cho Logic; Amazon Bedrock để kết nối với các mô hình AI (như Claude 3.5 Sonnet); DynamoDB để lưu trữ lịch sử.
+*   **Nguyên nhân của sự trì hoãn:** Diễn giả giải thích rằng não bộ thường bị thu hút bởi mạng xã hội vì nền tảng này mang lại **phần thưởng tức thì**, liên tục kích thích **sự tò mò** và không đòi hỏi quá nhiều nỗ lực để sử dụng. Ngược lại, việc học thường đem lại kết quả chậm hơn và yêu cầu sự tập trung trong thời gian dài, vì vậy dễ khiến não bộ cảm thấy kém hấp dẫn hơn.
+*   **Cơ chế Dopamine:** Dopamine không chỉ được tiết ra sau khi chúng ta nhận được phần thưởng. Một lượng dopamine đáng kể cũng được tạo ra khi não bộ **dự đoán rằng phần thưởng sắp xuất hiện**.
+*   **Một số phương pháp "hack" não để duy trì việc học:**
+    *   **Dopamine Gambling:** Chuẩn bị những mẩu giấy nhỏ ghi các phần thưởng đơn giản, sau đó chọn ngẫu nhiên một phần thưởng sau mỗi 10–15 phút học. Yếu tố bất ngờ giúp duy trì sự tò mò và động lực.
+    *   **Loss Aversion:** Xây dựng chuỗi ngày học tập bằng cách đánh dấu mỗi ngày hoàn thành trên lịch. Khi chuỗi này ngày càng dài, tâm lý sợ phá vỡ nó có thể trở thành động lực để tiếp tục duy trì.
+    *   **Giảm áp lực tâm lý:** Thay vì cố gắng tiếp cận một lượng kiến thức lớn cùng lúc, hãy chia nhỏ thành các nhiệm vụ rất đơn giản bằng cách áp dụng **quy tắc 2 phút**. Điều này giúp não bộ không cảm thấy bị quá tải.
+    *   **Gamification:** Biến việc học thành một trò chơi bằng cách thiết lập các cấp độ, tích lũy XP và tự thưởng sau khi hoàn thành những cột mốc nhất định.
 
-### **3. Diễn giả 3 (Khang Nguyen): AI-Ready Fresher - Skill and Mindset**
-*   **Tập trung vào nền tảng (Foundation):** Trong một thế giới thay đổi nhanh, những thứ không thay đổi chính là nền tảng. Doanh nghiệp không cần bạn biết hàng trăm dịch vụ, mà cần bạn nắm vững tư duy cốt lõi (Thought Process) của 5-10 dịch vụ chính.
-*   **AI là bộ khuếch đại (Amplifier):** AI sẽ làm người yếu trở nên tệ hơn (vì lười tư duy) và làm người giỏi trở nên xuất sắc gấp 10 lần. Đừng để AI "tư duy hộ", bạn có thể outsource việc thực thi nhưng không thể outsource sự hiểu biết.
-*   **Tầm quan trọng của câu hỏi "Tại sao" (Why):** Luôn chất vấn lý do tại sao chọn giải pháp này mà không phải giải pháp kia. Doanh nghiệp đánh giá cao cách bạn tư duy hơn là việc bạn đưa ra kết quả đúng hay sai.
-*   **Sự liêm chính (Integrity):** Làm việc hết mình ngay cả khi không có ai giám sát, xử lý cả những trường hợp ngoại lệ mà đề bài không yêu cầu.
-*   **Nhìn nhận dài hạn:** Đầu tư vào kiến thức, mạng lưới quan hệ (Network) và trải nghiệm thay vì chỉ nhìn vào mức lương ngắn hạn.
+### **2. Diễn giả 2 (Nguyen Tuan Thinh): Tự động hóa Prompt Engineering để nâng cao chất lượng kết quả từ LLM**
+
+*   **Xây dựng Prompt hiệu quả:** Diễn giả nhấn mạnh rằng các câu lệnh chung chung hoặc thiếu cấu trúc thường dẫn đến kết quả AI không như mong muốn. Một prompt chất lượng nên bao gồm bảy thành phần: **Role, Instruction, Context, Input, Output Format, Example và Constraint**.
+*   **Các phương pháp suy luận nâng cao:** Buổi chia sẻ giới thiệu những kỹ thuật như **Chain of Thought**, giúp AI thực hiện quá trình suy luận theo từng bước, và **Tree of Thought**, cho phép khám phá nhiều hướng suy luận khác nhau trước khi lựa chọn phương án phù hợp.
+*   **Dự án Optimizer:** Đây là một dự án hướng đến việc tự động cải thiện prompt bằng cách sử dụng kiến trúc **Serverless** trên AWS.
+    *   **Công nghệ sử dụng:** S3 và CloudFront đảm nhiệm phần frontend, trong khi API Gateway và Lambda xử lý logic backend. Amazon Bedrock được sử dụng để kết nối với các mô hình AI như Claude 3.5 Sonnet, còn DynamoDB được dùng để lưu trữ lịch sử liên quan đến prompt.
+
+### **3. Diễn giả 3 (Khang Nguyen): Trở thành một Fresher sẵn sàng cho AI thông qua kỹ năng và tư duy**
+
+*   **Củng cố nền tảng:** Dù công nghệ thay đổi nhanh chóng, kiến thức nền tảng vẫn luôn có giá trị. Doanh nghiệp không nhất thiết yêu cầu fresher phải biết mọi dịch vụ AWS, mà quan trọng hơn là hiểu được **cách tư duy và giải quyết vấn đề** khi làm việc với một số dịch vụ cốt lõi.
+*   **AI như một công cụ khuếch đại:** AI có thể được xem là một **bộ khuếch đại**. Nếu sử dụng một cách thụ động, AI có thể khiến người dùng trở nên lười suy nghĩ hơn. Tuy nhiên, một người có năng lực có thể tận dụng AI để nâng cao hiệu suất lên nhiều lần. AI có thể hỗ trợ thực hiện công việc, nhưng **không thể thay thế hoàn toàn sự hiểu biết**.
+*   **Luôn đặt câu hỏi "Tại sao?":** Một kỹ sư giỏi không chỉ đưa ra đáp án mà còn cần giải thích được lý do lựa chọn một giải pháp thay vì những phương án khác. Trong thực tế, doanh nghiệp thường quan tâm nhiều đến cách tư duy và lập luận đằng sau quyết định.
+*   **Tính chính trực trong công việc:** Sự chuyên nghiệp thể hiện ở việc vẫn duy trì chất lượng công việc ngay cả khi không có ai giám sát, đồng thời chủ động suy nghĩ và xử lý những trường hợp đặc biệt chưa được đề cập rõ ràng trong yêu cầu.
+*   **Tư duy dài hạn:** Thay vì chỉ tập trung vào mức lương trong ngắn hạn, nên đầu tư vào kiến thức, **mối quan hệ nghề nghiệp** và những trải nghiệm thực tế để tạo nền tảng cho sự phát triển lâu dài.
 
 ### **4. Diễn giả 4 (Thao Nguyen Phuong): Phương pháp BMAD trong phát triển phần mềm**
-*   **Phương pháp BMAD (Brief Method for AI Development):** Đây là phương pháp mã nguồn mở giúp quản lý dự án AI theo quy trình chặt chẽ của kỹ nghệ phần mềm.
-*   **Quy trình thực hiện:**
-    1.  **Planning:** Brainstorm với AI để tạo ra tài liệu yêu cầu sản phẩm (PRD/VOD).
-    2.  **Architecting:** Thiết kế kiến trúc hệ thống chuẩn chỉnh.
-    3.  **Shredding:** Chia nhỏ tài liệu thành các Epic và Story nhỏ để AI dễ hiểu và tránh hiện tượng "ảo giác" (hallucination).
-    4.  **Multi-Agent:** Sử dụng các "đại lý" AI chuyên biệt đóng vai trò như PM, Architect, Scrum Master, Developer và Reviewer để phối hợp thực hiện dự án.
-*   **Triết lý:** Tập trung vào việc viết tài liệu (document) thật chuẩn, từ đó AI sẽ tự động sinh ra mã nguồn chất lượng mà không cần con người quản lý quá nhiều code thủ công.
+
+*   **Giới thiệu về BMAD:** BMAD là một framework mã nguồn mở, áp dụng quy trình kỹ nghệ phần mềm có cấu trúc vào quá trình phát triển các dự án có sử dụng AI.
+*   **Quy trình triển khai chính:**
+    1.  **Planning:** Trao đổi và brainstorming cùng AI để xây dựng các tài liệu của dự án, chẳng hạn như Product Requirements Document (PRD/VOD).
+    2.  **Architecting:** Thiết kế một kiến trúc hệ thống rõ ràng, thống nhất và chuyên nghiệp trước khi bắt đầu triển khai.
+    3.  **Shredding:** Chia các tài liệu lớn thành những **Epics và Stories** nhỏ hơn để AI dễ xử lý yêu cầu và hạn chế nguy cơ xảy ra hallucination.
+    4.  **Multi-Agent Collaboration:** Sử dụng nhiều AI agent với các vai trò chuyên biệt như **PM, Architect, Scrum Master, Developer và Reviewer** để hỗ trợ từng giai đoạn khác nhau của dự án.
+*   **Triết lý cốt lõi:** Phương pháp này đặc biệt đề cao việc xây dựng **documentation** chính xác và chi tiết. Khi yêu cầu và tài liệu được chuẩn bị rõ ràng, AI có thể tạo ra source code chất lượng tốt hơn, từ đó giảm bớt công sức cần thiết cho việc quản lý và duy trì code thủ công.
