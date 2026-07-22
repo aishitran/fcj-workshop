@@ -29,7 +29,7 @@ During my internship, I participated in three events. Each one was a memorable e
 
 ---
 
-### [Event 2](4.2-Event3/)  
+### [Event 3](4.2-Event3/)  
 &emsp;**Event Name:** FCAJ Community Day - 2026/06/27 
 
 &emsp;**Date & Time:** 09:00, June 27, 2026
