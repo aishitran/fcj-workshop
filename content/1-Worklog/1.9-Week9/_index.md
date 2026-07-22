@@ -1,80 +1,71 @@
 ---
-title: "Week 9 Worklog"
-date: 2026-06-15
-weight: 9
+title: "Week 8 Worklog"
+date: 2026-06-08
+weight: 8
 chapter: false
-pre: " <b> 1.9. </b> "
+pre: " <b> 1.8. </b> "
 ---
 
-### Week 9 Objectives:
+### Week 8 Objectives:
 
-* Understand Infrastructure as Code (IaC) concepts and AWS CDK fundamentals.
-* Learn how to provision AWS infrastructure using AWS Cloud Development Kit (CDK).
-* Understand how to select appropriate EC2 instance types for different workloads.
-* Monitor AWS network infrastructure using CloudWatch.
-* Manage billing access securely with IAM.
-* Learn AWS service quotas and quota increase requests.
-* Explore resource usage monitoring and cost management using IAM and AWS billing services.
+* Master resource tagging strategies for organization and cost tracking.
+* Learn advanced IAM techniques with resource tags for fine-grained access control.
+* Understand AWS Systems Manager for managing infrastructure at scale.
+* Learn session management and remote access to EC2 instances.
+* Get introduced to AWS CloudFormation and AWS CDK.
+* Kick off the ReviewSentinel project with a 5-layer architecture design.
 
 ### Tasks to be carried out this week:
 
 | Topic | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| Infrastructure as Code | **CDK Basic – 2** <br> - Create infrastructure using AWS CDK <br> - Understand stacks and constructs <br> - Deploy infrastructure with CDK CLI <br> - Manage CloudFormation resources | 06/15/2026 | 06/15/2026 | <https://000076.awsstudygroup.com/> |
-| Infrastructure as Code | **Introduction to Infrastructure as Code** <br> - Understand IaC concepts and benefits <br> - Compare manual provisioning with automated deployment <br> - Learn infrastructure version control <br> - Improve deployment consistency | 06/16/2026 | 06/16/2026 | <https://000102.awsstudygroup.com/> |
-| EC2 Optimization | **Choose the correct EC2 size** <br> - Compare EC2 instance families <br> - Select appropriate instance types for workloads <br> - Balance performance and cost <br> - Apply EC2 sizing best practices | 06/17/2026 | 06/17/2026 | <https://000032.awsstudygroup.com/> |
-| Monitoring | **Monitor network infrastructure** <br> - Monitor network performance with CloudWatch <br> - Analyze network metrics <br> - Configure monitoring dashboards <br> - Detect networking issues | 06/18/2026 | 06/18/2026 | <https://000074.awsstudygroup.com/> |
-| Billing & IAM | **Delegate access to the billing console** <br> - Enable IAM access to Billing Console <br> - Grant billing permissions securely <br> - Apply least privilege principle | 06/19/2026 | 06/19/2026 | <https://000075.awsstudygroup.com/> |
-| Service Quotas | **Requesting a quota increase** <br> - Understand AWS Service Quotas <br> - Identify quota limitations <br> - Submit quota increase requests | 06/20/2026 | 06/20/2026 | <https://000063.awsstudygroup.com/> |
-| Cost Management | **Resource Usage and Cost Management with IAM on AWS** <br> - Monitor AWS resource usage <br> - Control access to billing information with IAM <br> - Understand cost management best practices <br> - Improve resource governance | 06/21/2026 | 06/21/2026 | <https://000064.awsstudygroup.com/> |
+| Resource Management | **Manage Resources Using Tags and Resource Groups** <br> - Implement tagging strategy <br> - Organize resources using tags <br> - Create resource groups by tags <br> - Track costs using tags | 06/08/2026 | 06/08/2026 | <https://000027.awsstudygroup.com/> |
+| Fine-grained Access Control | **Manage Access to EC2 Services with Resource Tags Through IAM Services** <br> - Create tag-based IAM policies <br> - Control resource access using tags <br> - Implement environment-based access (dev, staging, prod) <br> - Audit tag-based access patterns | 06/09/2026 | 06/09/2026 | <https://000028.awsstudygroup.com/> |
+| Infrastructure Management | **Manage Patches and Run Commands on Multiple Servers with AWS System Manager** <br> - Set up Systems Manager agent <br> - Create patch policies and patch groups <br> - Run commands across multiple instances <br> - Monitor patch compliance | 06/10/2026 | 06/10/2026 | <https://000031.awsstudygroup.com/> |
+| Remote Access | **Work with Amazon System Manager - Session Manager** <br> - Configure Session Manager for secure EC2 access <br> - Create IAM roles for Session Manager <br> - Establish sessions without SSH keys <br> - Monitor and log session activity | 06/11/2026 | 06/11/2026 | <https://000058.awsstudygroup.com/> |
+| Infrastructure as Code | **Introduction to CloudFormation and AWS CDK** <br> - Understand CloudFormation templates and stacks <br> - Get familiar with AWS CDK constructs <br> - Compare CloudFormation vs CDK approaches | 06/12/2026 | 06/12/2026 | AWS Study Group |
+| Project Kickoff | **ReviewSentinel Project – Architecture Design** <br> - Design the initial 5-layer architecture: edge, application, processing, AI analysis, monitoring | 06/13/2026 | 06/13/2026 | AWS Study Group |
 
-# Week 9 Achievements
+# Week 8 Achievements
 
-## Infrastructure as Code with AWS CDK
-- Learned the fundamentals of **Infrastructure as Code (IaC)** and its advantages over manual infrastructure provisioning.
-- Created AWS infrastructure using **AWS Cloud Development Kit (CDK)** by organizing resources into stacks and constructs.
-- Understood how AWS CDK synthesizes infrastructure definitions into AWS CloudFormation templates.
-- Deployed and managed cloud resources using the AWS CDK CLI.
+## Resource Tagging Strategy
+- Implemented a **comprehensive tagging strategy** categorizing resources by environment (dev/staging/prod), project, owner, cost center, and application.
+- Organized **large-scale resource inventories** using tags, making resources easily discoverable and manageable.
+- Created **resource groups** based on tag filters for logical organization and bulk operations.
+- Used **tags for cost allocation**, enabling detailed chargeback and cost tracking by business unit, project, or environment.
 
-## Infrastructure Automation
-- Understood the importance of infrastructure versioning, consistency, and repeatable deployments.
-- Learned how Infrastructure as Code improves automation, reduces configuration drift, and simplifies infrastructure maintenance.
-- Compared manual infrastructure deployment with automated provisioning approaches.
+## Fine-grained Access Control with Tags
+- Created **tag-based IAM policies** allowing permissions based on resource tags rather than resource names or ARNs.
+- Implemented **environment-based access control**: developers access only dev resources, QA accesses staging, operations access production.
+- Used **condition keys** like `aws:PrincipalTag` and `aws:ResourceTag` for dynamic, scalable permission management.
+- Audited **tag-based access patterns** to ensure security policies are correctly enforced and identify anomalies.
 
-## EC2 Instance Optimization
-- Compared different **Amazon EC2 instance families** for compute, memory, storage, and general-purpose workloads.
-- Selected appropriate EC2 instance types based on workload requirements.
-- Evaluated performance and cost considerations when choosing EC2 instance sizes.
-- Applied EC2 sizing best practices to optimize cloud resource utilization.
+## Infrastructure Management at Scale
+- Set up **Systems Manager agents** on EC2 instances for management and automation capabilities.
+- Created **patch policies** defining patching schedules and patch groups for organized patch management.
+- Executed **Run Command** to execute scripts and commands across multiple instances simultaneously, reducing manual configuration effort.
+- Monitored **patch compliance** and generated reports showing which instances are up-to-date with security patches.
 
-## Network Monitoring
-- Monitored network infrastructure using **Amazon CloudWatch** metrics.
-- Observed network performance indicators to identify potential bottlenecks.
-- Configured monitoring dashboards for infrastructure visibility.
-- Improved understanding of network performance monitoring and operational health.
+## Secure Remote Access with Session Manager
+- Configured **Session Manager** as a secure alternative to SSH, eliminating the need to manage SSH keys.
+- Created **IAM roles with Session Manager permissions** for fine-grained access control to individual instances.
+- Established **sessions to EC2 instances** through the AWS console or CLI without exposing instances to the internet.
+- Enabled **session logging and monitoring** in CloudTrail and CloudWatch for audit trails and compliance.
 
-## Billing Access Management
-- Enabled IAM user access to the **AWS Billing Console**.
-- Configured billing permissions following the principle of least privilege.
-- Understood how delegated billing access improves account security and administration.
+## Introduction to CloudFormation & AWS CDK
+- Got familiar with **AWS CloudFormation** templates for declarative infrastructure provisioning.
+- Explored **AWS CDK** as a higher-level framework for defining infrastructure using familiar programming constructs.
+- Compared the two approaches to understand when to use raw CloudFormation versus CDK abstractions.
 
-## AWS Service Quotas
-- Learned how AWS Service Quotas define resource limits across AWS services.
-- Identified quota limitations that may affect application deployment.
-- Understood the process of requesting service quota increases when additional capacity is required.
-
-## Resource Usage and Cost Management
-- Explored AWS resource usage monitoring and cloud cost management practices.
-- Understood how IAM permissions help protect billing and cost management resources.
-- Learned best practices for monitoring AWS resource utilization and controlling cloud costs.
-- Improved awareness of governance strategies for efficient AWS resource management.
+## ReviewSentinel Project Kickoff
+- Began designing the **ReviewSentinel** project architecture, structured into 5 layers: edge, application, processing, AI analysis, and monitoring.
+- Laid the groundwork for subsequent weeks' detailed architecture, security model, and Lambda function design.
 
 ### Theory Summary
-
-- **Infrastructure as Code (IaC):** The practice of managing and provisioning infrastructure through code instead of manual configuration.
-- **AWS CDK:** A development framework that allows cloud infrastructure to be defined using programming languages and deployed through AWS CloudFormation. :contentReference[oaicite:1]{index=1}
-- **Amazon EC2 Instance Types:** Different instance families designed for general-purpose, compute-optimized, memory-optimized, storage-optimized, and specialized workloads.
-- **Amazon CloudWatch:** Monitoring service used to collect metrics, logs, and alarms for AWS resources.
-- **AWS Billing Console:** Centralized dashboard for viewing AWS usage, billing information, and cost management.
-- **AWS Service Quotas:** Service limits that define the maximum number of AWS resources available within an account or Region.
-- **IAM for Cost Management:** IAM policies can be used to securely delegate access to billing and cost management resources while following the principle of least privilege.
+- **Resource Tags**: Key-value pairs attached to AWS resources for organization, automation, and cost allocation.
+- **Tag Strategy**: Systematic approach to tagging defining dimensions (environment, project, owner, cost center, etc.) for consistent resource management.
+- **Tag-based IAM Policies**: Condition-based access control using resource and principal tags, enabling scalable permission management without hardcoding resource ARNs.
+- **Systems Manager**: Central AWS service for managing infrastructure including patching, automation, and remote access.
+- **Session Manager**: Secure remote access tool providing shell access to EC2 instances without SSH keys, with full audit logging.
+- **CloudFormation**: AWS's native Infrastructure as Code service using declarative JSON/YAML templates.
+- **AWS CDK**: A framework for defining cloud infrastructure using familiar programming languages, which synthesizes into CloudFormation templates.

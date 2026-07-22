@@ -11,7 +11,7 @@ pre: " <b> 1.9. </b> "
 * Hiểu về khái niệm Infrastructure as Code (IaC) và nền tảng AWS CDK.
 * Học cách khởi tạo hạ tầng AWS bằng AWS Cloud Development Kit (CDK).
 * Hiểu cách lựa chọn loại instance EC2 phù hợp cho từng loại tải công việc.
-* Giám sát hạ tầng mạng AWS bằng CloudWatch.
+* Giám sát hạ tầng mạng AWS bằng CloudWatch và VPC Flow Logs.
 * Quản lý quyền truy cập thanh toán một cách an toàn với IAM.
 * Học về hạn ngạch dịch vụ AWS (service quotas) và cách yêu cầu tăng hạn ngạch.
 * Khám phá giám sát sử dụng tài nguyên và quản lý chi phí bằng IAM và các dịch vụ thanh toán AWS.
@@ -23,7 +23,7 @@ pre: " <b> 1.9. </b> "
 | Infrastructure as Code | **CDK Cơ bản – Phần 2** <br> - Tạo hạ tầng bằng AWS CDK <br> - Hiểu về stack và construct <br> - Triển khai hạ tầng bằng CDK CLI <br> - Quản lý tài nguyên CloudFormation | 15/06/2026 | 15/06/2026 | <https://000076.awsstudygroup.com/> |
 | Infrastructure as Code | **Giới thiệu về Infrastructure as Code** <br> - Hiểu khái niệm và lợi ích của IaC <br> - So sánh khởi tạo thủ công với triển khai tự động <br> - Học về kiểm soát phiên bản hạ tầng <br> - Cải thiện tính nhất quán khi triển khai | 16/06/2026 | 16/06/2026 | <https://000102.awsstudygroup.com/> |
 | Tối ưu EC2 | **Chọn đúng kích thước EC2** <br> - So sánh các họ instance EC2 <br> - Chọn loại instance phù hợp cho từng tải công việc <br> - Cân bằng giữa hiệu năng và chi phí <br> - Áp dụng các phương pháp hay nhất khi chọn kích thước EC2 | 17/06/2026 | 17/06/2026 | <https://000032.awsstudygroup.com/> |
-| Giám sát | **Giám sát hạ tầng mạng** <br> - Giám sát hiệu năng mạng bằng CloudWatch <br> - Phân tích các chỉ số mạng <br> - Cấu hình dashboard giám sát <br> - Phát hiện sự cố mạng | 18/06/2026 | 18/06/2026 | <https://000074.awsstudygroup.com/> |
+| Giám sát | **Giám sát hạ tầng mạng** <br> - Giám sát hiệu năng mạng bằng CloudWatch <br> - Bật và phân tích **VPC Flow Logs** để theo dõi lưu lượng mạng <br> - Cấu hình dashboard giám sát <br> - Phát hiện sự cố mạng | 18/06/2026 | 18/06/2026 | <https://000074.awsstudygroup.com/> |
 | Thanh toán & IAM | **Ủy quyền truy cập vào bảng điều khiển thanh toán** <br> - Bật quyền truy cập IAM vào Billing Console <br> - Cấp quyền thanh toán một cách an toàn <br> - Áp dụng nguyên tắc đặc quyền tối thiểu | 19/06/2026 | 19/06/2026 | <https://000075.awsstudygroup.com/> |
 | Hạn ngạch Dịch vụ | **Yêu cầu tăng hạn ngạch** <br> - Hiểu về AWS Service Quotas <br> - Xác định các giới hạn hạn ngạch <br> - Gửi yêu cầu tăng hạn ngạch | 20/06/2026 | 20/06/2026 | <https://000063.awsstudygroup.com/> |
 | Quản lý Chi phí | **Quản lý Sử dụng Tài nguyên và Chi phí bằng IAM trên AWS** <br> - Giám sát mức sử dụng tài nguyên AWS <br> - Kiểm soát truy cập vào thông tin thanh toán bằng IAM <br> - Hiểu các phương pháp hay nhất trong quản lý chi phí <br> - Cải thiện quản trị tài nguyên | 21/06/2026 | 21/06/2026 | <https://000064.awsstudygroup.com/> |
@@ -49,6 +49,7 @@ pre: " <b> 1.9. </b> "
 
 ## Giám sát Mạng
 - Giám sát hạ tầng mạng bằng các chỉ số **Amazon CloudWatch**.
+- Bật và phân tích **VPC Flow Logs** để ghi lại thông tin lưu lượng IP đi/đến các network interface, giúp phát hiện lưu lượng bất thường hoặc trái phép.
 - Theo dõi các chỉ báo hiệu năng mạng để phát hiện các điểm nghẽn tiềm ẩn.
 - Cấu hình dashboard giám sát để có khả năng quan sát hạ tầng.
 - Nâng cao hiểu biết về giám sát hiệu năng mạng và tình trạng vận hành.
@@ -75,6 +76,5 @@ pre: " <b> 1.9. </b> "
 - **AWS CDK:** Framework phát triển cho phép định nghĩa hạ tầng đám mây bằng ngôn ngữ lập trình và triển khai thông qua AWS CloudFormation.
 - **Loại Instance Amazon EC2:** Các họ instance khác nhau được thiết kế cho tải công việc mục đích chung, tối ưu tính toán, tối ưu bộ nhớ, tối ưu lưu trữ và các tải công việc chuyên biệt.
 - **Amazon CloudWatch:** Dịch vụ giám sát dùng để thu thập số liệu, log và cảnh báo cho tài nguyên AWS.
-- **AWS Billing Console:** Bảng điều khiển tập trung để xem thông tin sử dụng, thanh toán và quản lý chi phí AWS.
-- **AWS Service Quotas:** Giới hạn dịch vụ xác định số lượng tài nguyên AWS tối đa có sẵn trong một tài khoản hoặc Region.
-- **IAM cho Quản lý Chi phí:** Chính sách IAM có thể được sử dụng để ủy quyền truy cập an toàn vào tài nguyên thanh toán và quản lý chi phí, tuân theo nguyên tắc đặc quyền tối thiểu.
+- **VPC Flow Logs:** Tính năng ghi lại thông tin lưu lượng IP đi/đến các network interface trong VPC, hữu ích cho việc khắc phục sự cố và phân tích bảo mật.
+- **AWS Billing Console:** Bảng điều khiển tập trung để xem

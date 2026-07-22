@@ -12,6 +12,8 @@ pre: " <b> 1.8. </b> "
 * Học các kỹ thuật IAM nâng cao sử dụng thẻ tài nguyên để kiểm soát truy cập chi tiết.
 * Hiểu về AWS Systems Manager để quản lý hạ tầng ở quy mô lớn.
 * Học quản lý phiên (session) và truy cập từ xa vào EC2 instance.
+* Làm quen với AWS CloudFormation và AWS CDK.
+* Bắt đầu dự án ReviewSentinel: thiết kế kiến trúc 5 tầng.
 
 ### Các nhiệm vụ thực hiện trong tuần:
 
@@ -21,6 +23,8 @@ pre: " <b> 1.8. </b> "
 | Kiểm soát Truy cập Chi tiết | **Quản lý Truy cập vào Dịch vụ EC2 bằng Thẻ Tài nguyên thông qua IAM** <br> - Tạo chính sách IAM dựa trên thẻ <br> - Kiểm soát truy cập tài nguyên bằng thẻ <br> - Triển khai kiểm soát truy cập theo môi trường (dev, staging, prod) <br> - Kiểm tra các mẫu truy cập dựa trên thẻ | 09/06/2026 | 09/06/2026 | <https://000028.awsstudygroup.com/> |
 | Quản lý Hạ tầng | **Quản lý Bản vá và Chạy Lệnh trên Nhiều Máy chủ với AWS Systems Manager** <br> - Thiết lập agent Systems Manager <br> - Tạo chính sách vá lỗi và nhóm vá lỗi <br> - Chạy lệnh trên nhiều instance <br> - Giám sát mức độ tuân thủ bản vá | 10/06/2026 | 10/06/2026 | <https://000031.awsstudygroup.com/> |
 | Truy cập từ xa | **Làm việc với Amazon Systems Manager - Session Manager** <br> - Cấu hình Session Manager để truy cập EC2 an toàn <br> - Tạo vai trò IAM cho Session Manager <br> - Thiết lập phiên làm việc không cần khóa SSH <br> - Giám sát và ghi log hoạt động phiên | 11/06/2026 | 11/06/2026 | <https://000058.awsstudygroup.com/> |
+| Infrastructure as Code | **Giới thiệu CloudFormation và AWS CDK** <br> - Tìm hiểu template và stack của CloudFormation <br> - Làm quen với các construct của AWS CDK <br> - So sánh cách tiếp cận CloudFormation và CDK | 12/06/2026 | 12/06/2026 | AWS Study Group |
+| Khởi động Dự án | **Dự án ReviewSentinel – Thiết kế Kiến trúc** <br> - Thiết kế kiến trúc 5 tầng ban đầu: edge, ứng dụng, xử lý, phân tích AI, giám sát | 13/06/2026 | 13/06/2026 | AWS Study Group |
 
 # Thành tựu Tuần 8
 
@@ -48,9 +52,20 @@ pre: " <b> 1.8. </b> "
 - Thiết lập **phiên làm việc đến EC2 instance** thông qua AWS console hoặc CLI mà không cần mở instance ra internet.
 - Bật **ghi log và giám sát phiên làm việc** trong CloudTrail và CloudWatch để phục vụ kiểm toán và tuân thủ.
 
+## Làm quen CloudFormation & AWS CDK
+- Tìm hiểu **AWS CloudFormation** với các template khai báo để khởi tạo hạ tầng.
+- Khám phá **AWS CDK** như một framework bậc cao hơn để định nghĩa hạ tầng bằng các construct lập trình quen thuộc.
+- So sánh hai cách tiếp cận để hiểu khi nào nên dùng CloudFormation thuần và khi nào nên dùng CDK.
+
+## Khởi động Dự án ReviewSentinel
+- Bắt đầu thiết kế kiến trúc dự án **ReviewSentinel**, được cấu trúc thành 5 tầng: edge, ứng dụng, xử lý, phân tích AI và giám sát.
+- Đặt nền tảng cho việc thiết kế kiến trúc chi tiết, mô hình bảo mật và các Lambda function ở những tuần tiếp theo.
+
 ### Tóm tắt lý thuyết
 - **Thẻ Tài nguyên (Resource Tags)**: Cặp khóa-giá trị gắn vào tài nguyên AWS để phục vụ tổ chức, tự động hóa và phân bổ chi phí.
 - **Chiến lược Gắn thẻ**: Phương pháp tiếp cận có hệ thống trong việc gắn thẻ, xác định các chiều (môi trường, dự án, chủ sở hữu, trung tâm chi phí, v.v.) để quản lý tài nguyên nhất quán.
 - **Chính sách IAM dựa trên Thẻ**: Kiểm soát truy cập dựa trên điều kiện sử dụng thẻ tài nguyên và thẻ chủ thể (principal), cho phép quản lý quyền có khả năng mở rộng mà không cần mã hóa cứng ARN tài nguyên.
 - **Systems Manager**: Dịch vụ AWS trung tâm để quản lý hạ tầng bao gồm vá lỗi, tự động hóa và truy cập từ xa.
 - **Session Manager**: Công cụ truy cập từ xa an toàn cung cấp quyền truy cập shell vào EC2 instance mà không cần khóa SSH, với đầy đủ khả năng ghi log kiểm toán.
+- **CloudFormation**: Dịch vụ Infrastructure as Code gốc của AWS, sử dụng template khai báo dạng JSON/YAML.
+- **AWS CDK**: Framework cho phép định nghĩa hạ tầng đám mây bằng ngôn ngữ lập trình quen thuộc, sau đó tổng hợp thành template CloudFormation.

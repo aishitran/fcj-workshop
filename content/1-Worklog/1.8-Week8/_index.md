@@ -12,6 +12,8 @@ pre: " <b> 1.8. </b> "
 * Learn advanced IAM techniques with resource tags for fine-grained access control.
 * Understand AWS Systems Manager for managing infrastructure at scale.
 * Learn session management and remote access to EC2 instances.
+* Get introduced to AWS CloudFormation and AWS CDK.
+* Kick off the ReviewSentinel project with a 5-layer architecture design.
 
 ### Tasks to be carried out this week:
 
@@ -21,6 +23,8 @@ pre: " <b> 1.8. </b> "
 | Fine-grained Access Control | **Manage Access to EC2 Services with Resource Tags Through IAM Services** <br> - Create tag-based IAM policies <br> - Control resource access using tags <br> - Implement environment-based access (dev, staging, prod) <br> - Audit tag-based access patterns | 06/09/2026 | 06/09/2026 | <https://000028.awsstudygroup.com/> |
 | Infrastructure Management | **Manage Patches and Run Commands on Multiple Servers with AWS System Manager** <br> - Set up Systems Manager agent <br> - Create patch policies and patch groups <br> - Run commands across multiple instances <br> - Monitor patch compliance | 06/10/2026 | 06/10/2026 | <https://000031.awsstudygroup.com/> |
 | Remote Access | **Work with Amazon System Manager - Session Manager** <br> - Configure Session Manager for secure EC2 access <br> - Create IAM roles for Session Manager <br> - Establish sessions without SSH keys <br> - Monitor and log session activity | 06/11/2026 | 06/11/2026 | <https://000058.awsstudygroup.com/> |
+| Infrastructure as Code | **Introduction to CloudFormation and AWS CDK** <br> - Understand CloudFormation templates and stacks <br> - Get familiar with AWS CDK constructs <br> - Compare CloudFormation vs CDK approaches | 06/12/2026 | 06/12/2026 | AWS Study Group |
+| Project Kickoff | **ReviewSentinel Project – Architecture Design** <br> - Design the initial 5-layer architecture: edge, application, processing, AI analysis, monitoring | 06/13/2026 | 06/13/2026 | AWS Study Group |
 
 # Week 8 Achievements
 
@@ -48,9 +52,20 @@ pre: " <b> 1.8. </b> "
 - Established **sessions to EC2 instances** through the AWS console or CLI without exposing instances to the internet.
 - Enabled **session logging and monitoring** in CloudTrail and CloudWatch for audit trails and compliance.
 
+## Introduction to CloudFormation & AWS CDK
+- Got familiar with **AWS CloudFormation** templates for declarative infrastructure provisioning.
+- Explored **AWS CDK** as a higher-level framework for defining infrastructure using familiar programming constructs.
+- Compared the two approaches to understand when to use raw CloudFormation versus CDK abstractions.
+
+## ReviewSentinel Project Kickoff
+- Began designing the **ReviewSentinel** project architecture, structured into 5 layers: edge, application, processing, AI analysis, and monitoring.
+- Laid the groundwork for subsequent weeks' detailed architecture, security model, and Lambda function design.
+
 ### Theory Summary
 - **Resource Tags**: Key-value pairs attached to AWS resources for organization, automation, and cost allocation.
 - **Tag Strategy**: Systematic approach to tagging defining dimensions (environment, project, owner, cost center, etc.) for consistent resource management.
 - **Tag-based IAM Policies**: Condition-based access control using resource and principal tags, enabling scalable permission management without hardcoding resource ARNs.
 - **Systems Manager**: Central AWS service for managing infrastructure including patching, automation, and remote access.
 - **Session Manager**: Secure remote access tool providing shell access to EC2 instances without SSH keys, with full audit logging.
+- **CloudFormation**: AWS's native Infrastructure as Code service using declarative JSON/YAML templates.
+- **AWS CDK**: A framework for defining
